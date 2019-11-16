@@ -12,7 +12,7 @@ public class Main extends Application {
 		WindowManager.setPrimaryStage(primaryStage);
 		WindowManager.openMainWindow();
 	}
-	//ggggg
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
