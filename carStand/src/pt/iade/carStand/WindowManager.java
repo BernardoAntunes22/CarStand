@@ -32,7 +32,7 @@ final public class WindowManager {
 		primaryStage.getScene().setRoot(root);
 	}
 		
-	//Abrir janela Principal
+	//Abrir janela Principal de login
 	static public void openMainWindow() {
 		Parent root = createNodeTree("./views/LoginView.fxml", new MainController());			
 		Scene scene = new Scene(root);
