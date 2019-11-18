@@ -1,19 +1,22 @@
 package pt.iade.carStand.controllers;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.Carlist;
+import pt.iade.carStand.models.User;
 
 public class CarStandController {
 	
-    private Carlist carlist;
+    private User user;
     
-    public CarStandController(Carlist carlist) {
-    	this.carlist = carlist;
+    public CarStandController(User user) {
+    	this.user = user;
     }
 	
-    private void backToMain(ActionEvent event) {
+    @FXML
+    private void backToMain() {
     	WindowManager.backToMainWindow();
-    }
+    	}
 
 }

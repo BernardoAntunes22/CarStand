@@ -1,9 +1,9 @@
 package pt.iade.carStand.models;
 
-public class Item1 {
+public class Item {
 	protected String name;
 	protected double price;
-	public Item1(String name, double price) {
+	public Item(String name, double price) {
 		this.name = name;
 		this.price = price;
 	}

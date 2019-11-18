@@ -11,6 +11,7 @@ import pt.iade.carStand.Main;
 import pt.iade.carStand.controllers.CarStandController;
 import pt.iade.carStand.controllers.MainController;
 import pt.iade.carStand.models.Carlist;
+import pt.iade.carStand.models.User;
 import pt.iade.carStand.controllers.CarStandController;
 import pt.iade.carStand.models.Carlist;
 
@@ -24,27 +25,27 @@ final public class WindowManager {
 	
 	private WindowManager() {}
 	
-	static public void openItemsWindow(Carlist carstand) {
+	static public void openItemsWindow(User loggedUser) {
 		Parent root = createNodeTree("./views/CarListView.fxml",
-				new CarStandController(carstand));		
+				new CarStandController(loggedUser));		
 		// Replace the content of the current window (primaryStage)
 		primaryStage.getScene().setRoot(root);
 	}
-	
-	//voltar para inicial
-	static public void backToMainWindow() {
-		Parent root = createNodeTree("./views/CarStandView.fxml", new MainController());			
-		primaryStage.getScene().setRoot(root);	
-	}
-	
+		
 	//Abrir janela Principal
 	static public void openMainWindow() {
-		Parent root = createNodeTree("./views/CarStandView.fxml", new MainController());			
+		Parent root = createNodeTree("./views/LoginView.fxml", new MainController());			
 		Scene scene = new Scene(root);
 		scene.getStylesheets().add(
 				Main.class.getResource("application.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();
+	}
+	
+		//voltar para inicial
+	static public void backToMainWindow() {
+		Parent root = createNodeTree("./views/LoginView.fxml", new MainController());			
+		primaryStage.getScene().setRoot(root);	
 	}
 	
 	static public Parent createNodeTree(String viewPath, Object controller) {

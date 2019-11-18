@@ -1,18 +1,18 @@
 package pt.iade.carStand.models;
 
-import pt.iade.carStand.models.Item1;
+import pt.iade.carStand.models.Item;
 
 public class Car {
 	private double quantity;
-	private Item1 product;
-	public Car(double quantity, Item1 product) {
+	private Item product;
+	public Car(double quantity, Item product) {
 		this.quantity = quantity;
 		this.product = product;
 	}
 	public double getQuantity() {
 		return quantity;
 	}
-	public Item1 getProduct() {
+	public Item getProduct() {
 		return product;
 	}
 	public double getCost() {
