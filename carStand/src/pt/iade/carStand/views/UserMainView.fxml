@@ -18,8 +18,8 @@
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="0.0" prefWidth="28.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="248.0" minHeight="10.0" prefHeight="243.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="248.0" minHeight="10.0" prefHeight="234.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <opaqueInsets>
@@ -34,7 +34,7 @@
                   <Insets left="42.0" />
                </GridPane.margin>
             </Label>
-            <ListView prefHeight="208.0" prefWidth="137.0" GridPane.rowIndex="1">
+            <ListView prefHeight="229.0" prefWidth="152.0" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="13.0" />
                </GridPane.margin>
@@ -45,10 +45,10 @@
    <top>
       <Button mnemonicParsing="false" onAction="#backToMain" text="LOGOUT" BorderPane.alignment="CENTER">
          <BorderPane.margin>
-            <Insets left="425.0" top="5.0" />
+            <Insets left="430.0" top="5.0" />
          </BorderPane.margin>
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="10.0" />
          </font>
       </Button>
    </top>
@@ -92,4 +92,21 @@
          </children>
       </GridPane>
    </bottom>
+   <right>
+      <Button mnemonicParsing="false" prefHeight="19.0" prefWidth="75.0" text="Comprar" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets right="15.0" top="265.0" />
+         </BorderPane.margin>
+      </Button>
+   </right>
+   <center>
+      <ListView maxHeight="235.0" maxWidth="200.0" prefHeight="231.0" prefWidth="195.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="18.0" />
+         </BorderPane.margin>
+      </ListView>
+   </center>
 </BorderPane>

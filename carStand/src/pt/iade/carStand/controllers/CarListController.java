@@ -6,11 +6,11 @@ import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.Carlist;
 import pt.iade.carStand.models.User;
 
-public class CarStandController {
+public class CarListController {
 	
     private User user;
     
-    public CarStandController(User user) {
+    public CarListController(User user) {
     	this.user = user;
     }
 	
