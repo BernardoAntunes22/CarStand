@@ -8,10 +8,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.Main;
-import pt.iade.carStand.controllers.CarStandController;
-import pt.iade.carStand.controllers.MainController;
+import pt.iade.carStand.controllers.CarListController;
+import pt.iade.carStand.controllers.LoginController;
 import pt.iade.carStand.models.Carlist;
-import pt.iade.carStand.controllers.CarStandController;
+import pt.iade.carStand.models.User;
+import pt.iade.carStand.controllers.CarListController;
 import pt.iade.carStand.models.Carlist;
 
 final public class WindowManager {
@@ -24,27 +25,26 @@ final public class WindowManager {
 	
 	private WindowManager() {}
 	
-	static public void openItemsWindow(Carlist carstand) {
-		Parent root = createNodeTree("./views/CarListView.fxml",
-				new CarStandController(carstand));		
+	static public void openItemsWindow(User loggedUser) {
+		Parent root = createNodeTree("./views/UserMainView.fxml",
+				new CarListController(loggedUser));		
 		// Replace the content of the current window (primaryStage)
 		primaryStage.getScene().setRoot(root);
 	}
-	
-	//voltar para inicial
-	static public void backToMainWindow() {
-		Parent root = createNodeTree("./views/CarStandView.fxml", new MainController());			
-		primaryStage.getScene().setRoot(root);	
-	}
-	
-	//Abrir janela Principal
+		
+	//Abrir janela Principal de login
 	static public void openMainWindow() {
-		Parent root = createNodeTree("./views/CarStandView.fxml", new MainController());			
+		Parent root = createNodeTree("./views/LoginView.fxml", new LoginController());			
 		Scene scene = new Scene(root);
-		scene.getStylesheets().add(
-				Main.class.getResource("application.css").toExternalForm());
+		scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();
+	}
+	
+		//voltar para inicial
+	static public void backToMainWindow() {
+		Parent root = createNodeTree("./views/LoginView.fxml", new LoginController());			
+		primaryStage.getScene().setRoot(root);	
 	}
 	
 	static public Parent createNodeTree(String viewPath, Object controller) {
