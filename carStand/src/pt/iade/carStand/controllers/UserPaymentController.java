@@ -5,11 +5,11 @@ import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.Car;
 import pt.iade.carStand.models.User;
 
-public class PaymentController {
+public class UserPaymentController {
 	
     private User loggedUser;    
 
-	public PaymentController(User loggedUser, Car carToBuy) {
+	public UserPaymentController(User loggedUser, Car carToBuy) {
     	this.loggedUser = loggedUser;
 	}
 
@@ -22,8 +22,6 @@ public class PaymentController {
     void backToUserMainView() {
     	WindowManager.backToUserMainView(loggedUser);
 
-    }
-
-	
+    }	
 
 }

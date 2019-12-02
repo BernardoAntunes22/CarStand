@@ -7,12 +7,12 @@ import pt.iade.carStand.models.Car;
 import pt.iade.carStand.models.Carlist;
 import pt.iade.carStand.models.User;
 
-public class CarListController {
+public class UserMainController {
 	
-    private User user;
+    private User loggedUser;
     
-    public CarListController(User user) {
-    	this.user = user;
+    public UserMainController(User loggedUser) {
+    	this.loggedUser = loggedUser;
     }
 	
     @FXML
@@ -22,7 +22,7 @@ public class CarListController {
 
     @FXML
     void comprar(ActionEvent event) {
-    	WindowManager.comprarWindow(user, new Car());
+    	WindowManager.comprarWindow(loggedUser, new Car());
     }
 
 }
