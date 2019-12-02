@@ -8,6 +8,18 @@ public class Car {
 	private int ano;
 	private int preco;
 	
+	//contrutor meramente para o CarListController funcionar
+	public Car() {}
+	
+	public Car(String marca, String modelo, String cor, int cilindrada, int ano, int preco) {
+		super();
+		this.marca = marca;
+		this.modelo = modelo;
+		this.cor = cor;
+		this.cilindrada = cilindrada;
+		this.ano = ano;
+		this.preco = preco;
+	}
 	public String getMarca() {
 		return marca;
 	}

@@ -10,6 +10,8 @@ import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.Main;
 import pt.iade.carStand.controllers.CarListController;
 import pt.iade.carStand.controllers.LoginController;
+import pt.iade.carStand.controllers.PaymentController;
+import pt.iade.carStand.models.Car;
 import pt.iade.carStand.models.Carlist;
 import pt.iade.carStand.models.User;
 import pt.iade.carStand.controllers.CarListController;
@@ -25,10 +27,14 @@ final public class WindowManager {
 	
 	private WindowManager() {}
 	
+	//Apos selecionar o carro passa para pagamento
+	static public void comprarWindow(User loggedUser, Car carToBuy) {
+		Parent root = createNodeTree("./views/UserPaymentView.fxml", new PaymentController(loggedUser,carToBuy));		
+		primaryStage.getScene().setRoot(root);
+	}
+	
 	static public void openItemsWindow(User loggedUser) {
-		Parent root = createNodeTree("./views/UserMainView.fxml",
-				new CarListController(loggedUser));		
-		// Replace the content of the current window (primaryStage)
+		Parent root = createNodeTree("./views/UserMainView.fxml", new CarListController(loggedUser));
 		primaryStage.getScene().setRoot(root);
 	}
 		
@@ -44,6 +50,11 @@ final public class WindowManager {
 		//voltar para inicial
 	static public void backToMainWindow() {
 		Parent root = createNodeTree("./views/LoginView.fxml", new LoginController());			
+		primaryStage.getScene().setRoot(root);	
+	}
+	
+	static public void backToUserMainView(User loggedUser) {
+		Parent root = createNodeTree("./views/UserMainView.fxml", new CarListController(loggedUser));			
 		primaryStage.getScene().setRoot(root);	
 	}
 	

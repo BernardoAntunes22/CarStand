@@ -79,7 +79,7 @@
             <Insets bottom="10.0" />
          </BorderPane.margin>
          <children>
-            <Button mnemonicParsing="false" text="Cancelar e voltar">
+            <Button mnemonicParsing="false" onAction="#backToUserMainView" text="Cancelar e voltar">
                <GridPane.margin>
                   <Insets left="12.0" />
                </GridPane.margin>
@@ -99,7 +99,7 @@
       </GridPane>
    </bottom>
    <top>
-      <Button mnemonicParsing="false" text="LOGOUT" BorderPane.alignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#backToMain" text="LOGOUT" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets left="430.0" top="5.0" />
          </BorderPane.margin>
