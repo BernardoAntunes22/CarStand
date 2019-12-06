@@ -5,10 +5,16 @@ import javafx.fxml.FXML;
 import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.User;
 
-public class LoginController {
+public class LoginUserController {
 	@FXML
     private void entrar(ActionEvent event) {
     	WindowManager.openItemsWindow(new User());
     }  
+	
+    @FXML
+    private void openColab() {
+    	WindowManager.openColabWindow();
+    	} 
+	
 
 }

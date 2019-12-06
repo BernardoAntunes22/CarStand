@@ -9,7 +9,8 @@ import javafx.stage.Stage;
 import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.Main;
 import pt.iade.carStand.controllers.UserMainController;
-import pt.iade.carStand.controllers.LoginController;
+import pt.iade.carStand.controllers.LoginColabController;
+import pt.iade.carStand.controllers.LoginUserController;
 import pt.iade.carStand.controllers.UserPaymentController;
 import pt.iade.carStand.models.Car;
 import pt.iade.carStand.models.Carlist;
@@ -24,40 +25,50 @@ final public class WindowManager {
 	public static void setPrimaryStage(Stage primaryStage) {
 		WindowManager.primaryStage = primaryStage;	
 	}
-	
+
 	private WindowManager() {}
-	
+
 	//Apos selecionar o carro passa para pagamento
 	static public void comprarWindow(User loggedUser, Car carToBuy) {
 		Parent root = createNodeTree("./views/UserPaymentView.fxml", new UserPaymentController(loggedUser,carToBuy));		
 		primaryStage.getScene().setRoot(root);
 	}
-	
+
 	static public void openItemsWindow(User loggedUser) {
 		Parent root = createNodeTree("./views/UserMainView.fxml", new UserMainController(loggedUser));
 		primaryStage.getScene().setRoot(root);
 	}
-		
+
 	//Abrir janela Principal de login
 	static public void openMainWindow() {
-		Parent root = createNodeTree("./views/LoginView.fxml", new LoginController());			
+		Parent root = createNodeTree("./views/LoginUserView.fxml", new LoginUserController());			
 		Scene scene = new Scene(root);
 		scene.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
-	
-		//voltar para inicial
+
+	//voltar para inicial
 	static public void backToMainWindow() {
-		Parent root = createNodeTree("./views/LoginView.fxml", new LoginController());			
-		primaryStage.getScene().setRoot(root);	
+		Parent root = createNodeTree("./views/LoginUserView.fxml", new LoginUserController());
+		if (root != null)
+			primaryStage.getScene().setRoot(root);	
 	}
-	
+
+	//passa do loginUser para o loginColab
+	static public void openColabWindow() {
+		Parent root = createNodeTree("./views/LoginColabView.fxml", new LoginColabController());			
+		if (root != null)
+			primaryStage.getScene().setRoot(root);	
+	}
+
+	//voltar ao inicio
 	static public void backToUserMainView(User loggedUser) {
 		Parent root = createNodeTree("./views/UserMainView.fxml", new UserMainController(loggedUser));			
-		primaryStage.getScene().setRoot(root);	
+		if (root != null)
+			primaryStage.getScene().setRoot(root);	
 	}
-	
+
 	static public Parent createNodeTree(String viewPath, Object controller) {
 		try {
 			FXMLLoader loader = new FXMLLoader(
