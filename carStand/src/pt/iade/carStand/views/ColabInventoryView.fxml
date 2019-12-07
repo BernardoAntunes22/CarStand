@@ -19,7 +19,7 @@
       </Label>
    </center>
    <top>
-      <Button mnemonicParsing="false" text="LOGOUT" BorderPane.alignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#backToMainColab" text="LOGOUT" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets left="430.0" top="5.0" />
          </BorderPane.margin>
@@ -43,7 +43,7 @@
       </ListView>
    </right>
    <bottom>
-      <Button mnemonicParsing="false" text="Voltar" BorderPane.alignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#backToColabMainView" text="Voltar" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="5.0" right="440.0" />
          </BorderPane.margin>

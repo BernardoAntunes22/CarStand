@@ -7,7 +7,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <left>
-      <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="160.0" text="INVENTÁRIO" BorderPane.alignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#inventario" prefHeight="55.0" prefWidth="160.0" text="INVENTÁRIO" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets left="25.0" top="20.0" />
          </BorderPane.margin>
@@ -17,7 +17,7 @@
       </Button>
    </left>
    <right>
-      <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="160.0" text="ADICIONAR CARRO" BorderPane.alignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#addCar" prefHeight="55.0" prefWidth="160.0" text="ADICIONAR CARRO" BorderPane.alignment="CENTER">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -27,7 +27,7 @@
       </Button>
    </right>
    <bottom>
-      <Button mnemonicParsing="false" prefHeight="55.0" text="INFORMAÇÃO CLIENTES" BorderPane.alignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#infoUser" prefHeight="55.0" text="INFORMAÇÃO CLIENTES" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="30.0" />
          </BorderPane.margin>
@@ -37,7 +37,7 @@
       </Button>
    </bottom>
    <top>
-      <Button mnemonicParsing="false" text="LOGOUT" BorderPane.alignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#backToMainColab" text="LOGOUT" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets left="430.0" top="5.0" />
          </BorderPane.margin>

@@ -21,7 +21,6 @@ public class UserPaymentController {
     @FXML
     void backToUserMainView() {
     	WindowManager.backToUserMainView(loggedUser);
-
     }	
 
 }
