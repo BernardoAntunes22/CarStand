@@ -15,7 +15,7 @@ public class UserPaymentController {
 
     @FXML
     private void backToMain() {
-    	WindowManager.backToMainWindow();
+    	WindowManager.backLogin();
     	}
     
     @FXML

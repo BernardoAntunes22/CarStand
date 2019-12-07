@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.Main;
 import pt.iade.carStand.controllers.UserMainController;
+import pt.iade.carStand.controllers.ColabMainController;
 import pt.iade.carStand.controllers.LoginColabController;
 import pt.iade.carStand.controllers.LoginUserController;
 import pt.iade.carStand.controllers.UserPaymentController;
@@ -33,9 +34,15 @@ final public class WindowManager {
 		Parent root = createNodeTree("./views/UserPaymentView.fxml", new UserPaymentController(loggedUser,carToBuy));		
 		primaryStage.getScene().setRoot(root);
 	}
-
+	
+	//abre janela que mostra os carros
 	static public void openItemsWindow(User loggedUser) {
 		Parent root = createNodeTree("./views/UserMainView.fxml", new UserMainController(loggedUser));
+		primaryStage.getScene().setRoot(root);
+	}
+	
+	static public void openColabWindow(User loggedUser) {
+		Parent root = createNodeTree("./views/ColabMainView.fxml", new ColabMainController(loggedUser));
 		primaryStage.getScene().setRoot(root);
 	}
 
@@ -48,8 +55,8 @@ final public class WindowManager {
 		primaryStage.show();
 	}
 
-	//voltar para inicial
-	static public void backToMainWindow() {
+	//voltar para inicial user
+	static public void backLogin() {
 		Parent root = createNodeTree("./views/LoginUserView.fxml", new LoginUserController());
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	

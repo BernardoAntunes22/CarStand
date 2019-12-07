@@ -17,7 +17,7 @@ public class UserMainController {
 	
     @FXML
     private void backToMain() {
-    	WindowManager.backToMainWindow();
+    	WindowManager.backLogin();
     	}
 
     @FXML
