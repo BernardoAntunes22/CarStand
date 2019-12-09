@@ -11,10 +11,15 @@ public class ColabAddCarController {
     	this.loggedUser = loggedUser;
 	}
 	
+	@FXML
+	private void openAddCarComplete() {
+		WindowManager.openAddCarComplete(loggedUser);
+	}
+	
     @FXML
     private void backToMainColab() {
     	WindowManager.backLoginColab();
-    	}
+    }
     
     @FXML
     void backToColabMainView() {

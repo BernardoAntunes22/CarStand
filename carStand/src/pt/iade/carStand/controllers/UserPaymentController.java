@@ -6,21 +6,26 @@ import pt.iade.carStand.models.Car;
 import pt.iade.carStand.models.User;
 
 public class UserPaymentController {
-	
-    private User loggedUser;    
+
+	private User loggedUser;    
 
 	public UserPaymentController(User loggedUser, Car carToBuy) {
-    	this.loggedUser = loggedUser;
+		this.loggedUser = loggedUser;
 	}
 
-    @FXML
-    private void backToMain() {
-    	WindowManager.backLogin();
-    	}
-    
-    @FXML
-    void backToUserMainView() {
-    	WindowManager.backToUserMainView(loggedUser);
-    }	
+	@FXML
+	private void paymentComplete() {
+		WindowManager.openPaymentComplete(loggedUser);
+	}
+
+	@FXML
+	private void backToMain() {
+		WindowManager.backLogin();
+	}
+
+	@FXML
+	void backToUserMainView() {
+		WindowManager.backToUserMainView(loggedUser);
+	}	
 
 }

@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.Main;
 import pt.iade.carStand.controllers.UserMainController;
+import pt.iade.carStand.controllers.UserPaymentCompleteController;
+import pt.iade.carStand.controllers.ColabAddCarCompleteController;
 import pt.iade.carStand.controllers.ColabAddCarController;
 import pt.iade.carStand.controllers.ColabInfoUserController;
 import pt.iade.carStand.controllers.ColabInventoryController;
@@ -64,6 +66,12 @@ final public class WindowManager {
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
 	}
+	//Abre confirmacao apos pagamento
+	static public void openPaymentComplete(User loggedUser) {
+		Parent root = createNodeTree("./views/UserPaymentCompleteView.fxml", new UserPaymentCompleteController(loggedUser));
+		primaryStage.getScene().setRoot(root);
+	}
+	
 
 //FAZENDO LOGIN PELO COLAB
 	//passa do loginUser para o loginColab
@@ -105,6 +113,18 @@ final public class WindowManager {
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
 	}
+	//Adicionar completo
+	static public void openAddCarComplete(User loggedUser) {
+		Parent root = createNodeTree("./views/ColabAddCarCompleteView.fxml", new ColabAddCarCompleteController(loggedUser));
+		primaryStage.getScene().setRoot(root);
+	}
+	//volta para adicionar outro carro
+	static public void backToColabAddCarView(User loggedUser) {
+		Parent root = createNodeTree("./views/ColabAddCarView.fxml", new ColabAddCarController(loggedUser));			
+		if (root != null)
+			primaryStage.getScene().setRoot(root);	
+	}
+	
 
 	static public Parent createNodeTree(String viewPath, Object controller) {
 		try {

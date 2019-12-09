@@ -97,7 +97,7 @@
       </GridPane>
    </center>
    <right>
-      <Button mnemonicParsing="false" text="ADICIONAR" BorderPane.alignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#openAddCarComplete" text="ADICIONAR" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets right="5.0" top="352.0" />
          </BorderPane.margin>
