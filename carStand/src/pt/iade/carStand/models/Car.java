@@ -6,19 +6,19 @@ public class Car {
 	private String cor;
 	private int cilindrada;
 	private int ano;
-	private int preco;
+	private double preco;
 	
 	//contrutor meramente para o CarListController funcionar
 	public Car() {}
 	
-	public Car(String marca, String modelo, String cor, int cilindrada, int ano, int preco) {
+	public Car(String marca, String modelo, int cilindrada, double preco, int ano) {
 		super();
 		this.marca = marca;
 		this.modelo = modelo;
-		this.cor = cor;
 		this.cilindrada = cilindrada;
-		this.ano = ano;
 		this.preco = preco;
+		this.ano = ano;
+		
 	}
 	public String getMarca() {
 		return marca;
@@ -50,32 +50,16 @@ public class Car {
 	public void setAno(int ano) {
 		this.ano = ano;
 	}
-	public int getPreco() {
+	public double getPreco() {
 		return preco;
 	}
 	public void setPreco(int preco) {
 		this.preco = preco;
 	}
-	
-	/*private double quantity;
-	private Item product;
-	public Car(double quantity, Item product) {
-		this.quantity = quantity;
-		this.product = product;
-	}
-	public double getQuantity() {
-		return quantity;
-	}
-	public Item getProduct() {
-		return product;
-	}
-	public double getCost() {
-		return quantity*product.getPrice();
-	}
+
 	@Override
 	public String toString() {
-		return quantity + " X " + product + " - Total : "+
-				String.format("%.2f", getCost())+" €";
-	} */
-	
+		return "Marca: " + marca + ", Modelo: " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco + ", Ano: "+ ano;
+	}
+
 }

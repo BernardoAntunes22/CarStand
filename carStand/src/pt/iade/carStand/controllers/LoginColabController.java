@@ -6,6 +6,8 @@ import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.User;
 
 public class LoginColabController {
+	private User loggedUser;
+	
     @FXML
     private void backToMain() {
     	WindowManager.backLogin();
@@ -13,7 +15,7 @@ public class LoginColabController {
 
     @FXML
     void entrar(ActionEvent event) {
-    	WindowManager.openColabWindow(new User());
+    	WindowManager.openColabWindow(loggedUser);
     }
 
 }

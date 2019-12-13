@@ -31,7 +31,6 @@
             <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
         </rowConstraints>
@@ -55,7 +54,7 @@
                   <Insets left="50.0" />
                </GridPane.margin>
             </Label>
-            <Label text="Cor:" underline="true" GridPane.rowIndex="2">
+            <Label text="Cilindrada:" underline="true" GridPane.rowIndex="2">
                <font>
                   <Font size="15.0" />
                </font>
@@ -63,7 +62,7 @@
                   <Insets left="50.0" />
                </GridPane.margin>
             </Label>
-            <Label text="Cilindrada:" underline="true" GridPane.rowIndex="3">
+            <Label text="Ano:" underline="true" GridPane.rowIndex="3">
                <font>
                   <Font size="15.0" />
                </font>
@@ -71,15 +70,7 @@
                   <Insets left="50.0" />
                </GridPane.margin>
             </Label>
-            <Label text="Ano:" underline="true" GridPane.rowIndex="4">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets left="50.0" />
-               </GridPane.margin>
-            </Label>
-            <Label text="Preço:" underline="true" GridPane.rowIndex="5">
+            <Label text="Preço:" underline="true" GridPane.rowIndex="4">
                <font>
                   <Font size="15.0" />
                </font>
@@ -92,7 +83,6 @@
             <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
    </center>

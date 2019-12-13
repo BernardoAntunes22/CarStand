@@ -6,9 +6,11 @@ import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.User;
 
 public class LoginUserController {
+	
+	private User loggedUser;
 	@FXML
     private void entrar(ActionEvent event) {
-    	WindowManager.openItemsWindow(new User());
+    	WindowManager.openItemsWindow(loggedUser);
     }  
 	
     @FXML
