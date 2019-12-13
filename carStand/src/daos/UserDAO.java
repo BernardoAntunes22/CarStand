@@ -21,7 +21,7 @@ public final class UserDAO {
 		try (Statement stat = conn.createStatement();
 				ResultSet rs = stat.executeQuery("Select * from Cliente")) {
 			while(rs.next()) {
-				int id = rs.getInt("ID_Cliente");
+				//O ID não irá ser usado
 				String nome = rs.getString("Nome");
 				String morada = rs.getString("Morada");
 				int telemovel = rs.getInt("NTelemóvel");

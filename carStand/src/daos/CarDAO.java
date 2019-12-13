@@ -20,7 +20,7 @@ public final class  CarDAO {
 		try (Statement stat = conn.createStatement();
 				ResultSet rs = stat.executeQuery("Select * from Carro")) {
 			while(rs.next()) {
-				int id = rs.getInt("ID_Car");
+				//O ID não irá ser usado
 				String marca = rs.getString("Marca");
 				String modelo = rs.getString("Modelo");
 				int cilindrada = rs.getInt("Cilindrada");
