@@ -1,0 +1,58 @@
+INSERT INTO Código_Postal (ID_CoDPost, CP_Freg, CP_Concelho, CP_3D, CP_$D) VALUES
+
+(301, 'Lisboa', 'Santa Maria de Belém', 354, 1400),
+(302, 'Lisboa', 'Santa Maria de Belém', 355, 1400),
+(303, 'Lisboa', 'Santa Maria de Belém', 260, 1400),
+(304, 'Lisboa', 'Santa Maria de Belém', 138, 1400),
+(305, 'Lisboa', 'Santa Maria de Belém', 307, 1400),
+(306, 'Lisboa', 'Santa Maria de Belém', 354, 1400),
+(307, 'Lisboa', 'Santa Maria de Belém', 308, 1400),
+(308, 'Lisboa', 'Santa Maria de Belém', 057, 1400),
+(309, 'Lisboa', 'Santa Maria de Belém', 096, 1400),
+(310, 'Lisboa', 'Santos-o-Velho', 871, 1200),
+(311, 'Lisboa', 'Santos-o-Velho', 011, 1200),
+(312, 'Lisboa', 'Santos-o-Velho', 084, 1200),
+(313, 'Lisboa', 'Santos-o-Velho', 014, 1200),
+(314, 'Lisboa', 'Santos-o-Velho', 868, 1200),
+(315, 'Lisboa', 'Santos-o-Velho', 013, 1200),
+(316, 'Lisboa', 'Santos-o-Velho', 149, 1200),
+(317, 'Lisboa', 'Santos-o-Velho', 615, 1200),
+(318, 'Lisboa', 'Santos-o-Velho', 721, 1200),
+(319, 'Lisboa', 'Santos-o-Velho', 868, 1200),
+(320, 'Lisboa', 'Ajuda', 174, 1300),
+(321, 'Lisboa', 'Ajuda', 435, 1300),
+(322, 'Lisboa', 'Ajuda', 211, 1300),
+(323, 'Lisboa', 'Ajuda', 563, 1300),
+(324, 'Lisboa', 'Ajuda', 495, 1300),
+(325, 'Lisboa', 'Ajuda', 177, 1300),
+(324, 'Lisboa', 'Ajuda', 573, 1300),
+(325, 'Lisboa', 'Ajuda', 379, 1300),
+(326, 'Lisboa', 'Ajuda', 333, 1300),
+(327, 'Lisboa', 'Ajuda', 067, 1300),
+(328, 'Lisboa', 'Ajuda', 392, 1300),
+(329, 'Lisboa', 'Ajuda', 451, 1300),
+(330, 'Lisboa', 'Castelo', 223, 1100),
+(331, 'Lisboa', 'Castelo', 477, 1100),
+(332, 'Lisboa', 'Castelo', 129, 1100),
+(333, 'Lisboa', 'Castelo', 250, 1100),
+(334, 'Lisboa', 'Castelo', 479, 1100),
+(335, 'Lisboa', 'Castelo', 430, 1100),
+(336, 'Lisboa', 'Castelo', 181, 1100),
+(337, 'Lisboa', 'Castelo', 244, 1100),
+(338, 'Lisboa', 'Castelo', 245, 1100),
+(339, 'Lisboa', 'Castelo', 429, 1100),
+(340, 'Lisboa', 'São João de Brito', 001, 1701),
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO Cliente (ID_Cliente, NIF, Email, Profissão, NTelemóvel, Morada, Nome, ID_CoDPost) VALUES
+(20, 234789456, 'IgorSilva@example.com', 'Desempregado', '00351914564935', 'Igor Silva', 30);
