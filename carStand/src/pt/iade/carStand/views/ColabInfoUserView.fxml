@@ -46,7 +46,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
                <GridPane.margin>
-                  <Insets left="185.0" />
+                  <Insets left="185.0" top="25.0" />
                </GridPane.margin>
             </Label>
             <Button mnemonicParsing="false" onAction="#backToMainColab" prefHeight="23.0" prefWidth="61.0" text="LOGOUT" GridPane.columnIndex="1">
