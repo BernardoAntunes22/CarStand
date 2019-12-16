@@ -1,47 +1,191 @@
-INSERT INTO Código_Postal (ID_CoDPost, CP_Freg, CP_Concelho, CP_3D, CP_$D) VALUES
-(300, 'Lisboa', 'Santa Maria de Belém', 340, 1400),
-(301, 'Lisboa', 'Santa Maria de Belém', 354, 1400),
-(302, 'Lisboa', 'Santa Maria de Belém', 355, 1400),
-(303, 'Lisboa', 'Santa Maria de Belém', 260, 1400),
-(304, 'Lisboa', 'Santa Maria de Belém', 138, 1400),
-(305, 'Lisboa', 'Santa Maria de Belém', 307, 1400),
-(306, 'Lisboa', 'Santa Maria de Belém', 354, 1400),
-(307, 'Lisboa', 'Santa Maria de Belém', 308, 1400),
-(308, 'Lisboa', 'Santa Maria de Belém', 057, 1400),
-(309, 'Lisboa', 'Santa Maria de Belém', 096, 1400),
-(310, 'Lisboa', 'Santos-o-Velho', 871, 1200),
-(311, 'Lisboa', 'Santos-o-Velho', 011, 1200),
-(312, 'Lisboa', 'Santos-o-Velho', 084, 1200),
-(313, 'Lisboa', 'Santos-o-Velho', 014, 1200),
-(314, 'Lisboa', 'Santos-o-Velho', 868, 1200),
-(315, 'Lisboa', 'Santos-o-Velho', 013, 1200),
-(316, 'Lisboa', 'Santos-o-Velho', 149, 1200),
-(317, 'Lisboa', 'Santos-o-Velho', 615, 1200),
-(318, 'Lisboa', 'Santos-o-Velho', 721, 1200),
-(319, 'Lisboa', 'Santos-o-Velho', 868, 1200),
-(320, 'Lisboa', 'Ajuda', 174, 1300),
-(321, 'Lisboa', 'Ajuda', 435, 1300),
-(322, 'Lisboa', 'Ajuda', 211, 1300),
-(323, 'Lisboa', 'Ajuda', 563, 1300),
-(324, 'Lisboa', 'Ajuda', 495, 1300),
-(326, 'Lisboa', 'Ajuda', 177, 1300),
-(327, 'Lisboa', 'Ajuda', 573, 1300),
-(328, 'Lisboa', 'Ajuda', 379, 1300),
-(329, 'Lisboa', 'Ajuda', 333, 1300),
-(330, 'Lisboa', 'Ajuda', 067, 1300),
-(331, 'Lisboa', 'Ajuda', 392, 1300),
-(332, 'Lisboa', 'Ajuda', 451, 1300),
-(333, 'Lisboa', 'Castelo', 223, 1100),
-(334, 'Lisboa', 'Castelo', 477, 1100),
-(335, 'Lisboa', 'Castelo', 129, 1100),
-(336, 'Lisboa', 'Castelo', 250, 1100),
-(337, 'Lisboa', 'Castelo', 479, 1100),
-(338, 'Lisboa', 'Castelo', 430, 1100),
-(339, 'Lisboa', 'Castelo', 181, 1100),
-(340, 'Lisboa', 'Castelo', 244, 1100),
-(341, 'Lisboa', 'Castelo', 245, 1100),
-(342, 'Lisboa', 'Castelo', 429, 1100),
-
+INSERT INTO Código_Postal(
+    ID_CoDPost,
+    CP_Freg,
+    CP_Concelho,
+    CP_3D,
+    CP_4D
+)
+VALUES(
+    300,
+    'Lisboa',
+    'Santa Maria de Belém',
+    340,
+    1400
+),(
+    301,
+    'Lisboa',
+    'Santa Maria de Belém',
+    354,
+    1400
+),(
+    302,
+    'Lisboa',
+    'Santa Maria de Belém',
+    355,
+    1400
+),(
+    303,
+    'Lisboa',
+    'Santa Maria de Belém',
+    260,
+    1400
+),(
+    304,
+    'Lisboa',
+    'Santa Maria de Belém',
+    138,
+    1400
+),(
+    305,
+    'Lisboa',
+    'Santa Maria de Belém',
+    307,
+    1400
+),(
+    306,
+    'Lisboa',
+    'Santa Maria de Belém',
+    354,
+    1400
+),(
+    307,
+    'Lisboa',
+    'Santa Maria de Belém',
+    308,
+    1400
+),(
+    308,
+    'Lisboa',
+    'Santa Maria de Belém',
+    057,
+    1400
+),(
+    309,
+    'Lisboa',
+    'Santa Maria de Belém',
+    096,
+    1400
+),(
+    310,
+    'Lisboa',
+    'Santos-o-Velho',
+    871,
+    1200
+),(
+    311,
+    'Lisboa',
+    'Santos-o-Velho',
+    011,
+    1200
+),(
+    312,
+    'Lisboa',
+    'Santos-o-Velho',
+    084,
+    1200
+),(
+    313,
+    'Lisboa',
+    'Santos-o-Velho',
+    014,
+    1200
+),(
+    314,
+    'Lisboa',
+    'Santos-o-Velho',
+    868,
+    1200
+),(
+    315,
+    'Lisboa',
+    'Santos-o-Velho',
+    013,
+    1200
+),(
+    316,
+    'Lisboa',
+    'Santos-o-Velho',
+    149,
+    1200
+),(
+    317,
+    'Lisboa',
+    'Santos-o-Velho',
+    615,
+    1200
+),(
+    318,
+    'Lisboa',
+    'Santos-o-Velho',
+    721,
+    1200
+),(
+    319,
+    'Lisboa',
+    'Santos-o-Velho',
+    868,
+    1200
+),(320, 'Lisboa', 'Ajuda', 174, 1300),(321, 'Lisboa', 'Ajuda', 435, 1300),(322, 'Lisboa', 'Ajuda', 211, 1300),(323, 'Lisboa', 'Ajuda', 563, 1300),(324, 'Lisboa', 'Ajuda', 495, 1300),(326, 'Lisboa', 'Ajuda', 177, 1300),(327, 'Lisboa', 'Ajuda', 573, 1300),(328, 'Lisboa', 'Ajuda', 379, 1300),(329, 'Lisboa', 'Ajuda', 333, 1300),(330, 'Lisboa', 'Ajuda', 067, 1300),(331, 'Lisboa', 'Ajuda', 392, 1300),(332, 'Lisboa', 'Ajuda', 451, 1300),(
+    333,
+    'Lisboa',
+    'Castelo',
+    223,
+    1100
+),(
+    334,
+    'Lisboa',
+    'Castelo',
+    477,
+    1100
+),(
+    335,
+    'Lisboa',
+    'Castelo',
+    129,
+    1100
+),(
+    336,
+    'Lisboa',
+    'Castelo',
+    250,
+    1100
+),(
+    337,
+    'Lisboa',
+    'Castelo',
+    479,
+    1100
+),(
+    338,
+    'Lisboa',
+    'Castelo',
+    430,
+    1100
+),(
+    339,
+    'Lisboa',
+    'Castelo',
+    181,
+    1100
+),(
+    340,
+    'Lisboa',
+    'Castelo',
+    244,
+    1100
+),(
+    341,
+    'Lisboa',
+    'Castelo',
+    245,
+    1100
+),(
+    342,
+    'Lisboa',
+    'Castelo',
+    429,
+    1100
+),
 
 
 
@@ -54,19 +198,341 @@ INSERT INTO Código_Postal (ID_CoDPost, CP_Freg, CP_Concelho, CP_3D, CP_$D) VALU
 
 --Falta adicionar as moradas
 
-INSERT INTO Cliente (ID_Cliente, NIF, Email, Profissão, NTelemóvel, Morada, Nome, ID_CoDPost) VALUES
-(200, 234567897, 'IgorSilva@gmail.com', 'Desempregado', 914564935,'', 'Igor Silva', 300),
-(201, 234567898, 'BenjaminLeonard@gmail.com', 'Gestor', 911269932, 'Benjamin Leonard', 301),
-(202, 234567899, 'MaciRogers@gmail.com', 'Diretor de Marketing', 935385823, 'Maci Rogers', 302),
-(203, 234567900, 'LucilleDuarte@gmail.com', 'Web Designer', 924567823, 'Lucille Duarte', 303),
-(204, 234567901, 'SiobhanMarsden@gmail.com', 'Analísta', 969349672, 'Siobhan Marsden', 304),
-(205, 234567902, 'MikaelSantana@gmail.com', 'Gestor', 938732468, 'Mikael Santana', 305),
-(206, 234567903, 'HamzaWagstaff@gmail.com', 'Engenheiro Civil', 933573572, 'Hamza Wagstaff', 306),
-(207, 234567904, 'RishiMason@gmail.com', 'Engenheiro Informático', 933573555, 'Rishi Manson', 307),
-(208, 234567905, 'SalahuddinSnider@gmail.com', 'Desempregado', 933458927, 'Salahuddin Snider', 308),
-(209, 234567906, 'SapphireMcculloch@gmail.com', 'Engenheiro Civil', 933573572, 'Sapphire Mcculloch', 309),
-(210, 234567907, 'JarethEspinoza@gmail.com', 'Analista Informático', 933495849, 'Jareth Espinoza', 310);
+INSERT INTO Cliente(
+    ID_Cliente,
+    NIF,
+    Email,
+    Profissão,
+    NTelemóvel,
+    Morada,
+    Nome,
+    ID_CoDPost
+)
+VALUES(
+    200,
+    234567897,
+    'IgorSilva@gmail.com',
+    'Desempregado',
+    914564935,
+    '',
+    'Igor Silva',
+    300
+),(
+    201,
+    234567898,
+    'BenjaminLeonard@gmail.com',
+    'Gestor',
+    911269932,
+    'Benjamin Leonard',
+    301
+),(
+    202,
+    234567899,
+    'MaciRogers@gmail.com',
+    'Diretor de Marketing',
+    935385823,
+    'Maci Rogers',
+    302
+),(
+    203,
+    234567900,
+    'LucilleDuarte@gmail.com',
+    'Web Designer',
+    924567823,
+    'Lucille Duarte',
+    303
+),(
+    204,
+    234567901,
+    'SiobhanMarsden@gmail.com',
+    'Analísta',
+    969349672,
+    'Siobhan Marsden',
+    304
+),(
+    205,
+    234567902,
+    'MikaelSantana@gmail.com',
+    'Gestor',
+    938732468,
+    'Mikael Santana',
+    305
+),(
+    206,
+    234567903,
+    'HamzaWagstaff@gmail.com',
+    'Engenheiro Civil',
+    933573572,
+    'Hamza Wagstaff',
+    306
+),(
+    207,
+    234567904,
+    'RishiMason@gmail.com',
+    'Engenheiro Informático',
+    933573555,
+    'Rishi Manson',
+    307
+),(
+    208,
+    234567905,
+    'SalahuddinSnider@gmail.com',
+    'Desempregado',
+    933458927,
+    'Salahuddin Snider',
+    308
+),(
+    209,
+    234567906,
+    'SapphireMcculloch@gmail.com',
+    'Engenheiro Civil',
+    933573572,
+    'Sapphire Mcculloch',
+    309
+),(
+    210,
+    234567907,
+    'JarethEspinoza@gmail.com',
+    'Analista Informático',
+    933495849,
+    'Jareth Espinoza',
+    310
+);
 
 
 
+
+INSERT INTO Carro (ID_Car, Marca, Modelo, Cilindrada, Preço, Ano, Categoria, Matrícula, Combustivel)
+VALUE
+    (
+        400,
+        'Peugeot',
+        '308',
+        1500,
+        16700,
+        2018,
+        'hatchback',
+        '69-VU-71',
+        'Diesel'
+    ),
+    (
+        401,
+        'Peugeot',
+        '3008',
+        1600,
+        28890,
+        2019,
+        'SUV',
+        '22-ZE-98',
+        'Diesel'
+    ),
+    (
+        402,
+        'Peugeot',
+        '308 SW',
+        1600,
+        18240,
+        2018,
+        'Carrinha',
+        '71 - QF -12 ',
+        ' Diesel '
+    ),
+    (
+        403,
+        ' Peugeot ',
+        ' 5088 ',
+        2000,
+        21900,
+        2016,
+        ' SUV ',
+        '43-QU-34',
+        'Diesel'
+    ),
+    (
+        404,
+        'Peugeot',
+        '208',
+        1500,
+        28475,
+        2016,
+        'Hatchback',
+        '56-SA-19',
+        'Diesel'
+    ),
+    (
+        405,
+        'Peugeot',
+        '508',
+        1500,
+        48953,
+        2019,
+        'Sedan',
+        '98-ZF-57',
+        'Diesel'
+    ),
+    (
+        406,
+        'Peugeot',
+        '2008',
+        1500,
+        29484,
+        2018,
+        'SUV',
+        '83-UU-29',
+        'Diesel'
+    ),
+    (
+        407,
+        'Peugeot',
+        '208',
+        1200,
+        18475,
+        2019,
+        'Hatchback',
+        '98-ZA-48',
+        "Diesel"
+    ),
+    (
+        408,
+        'Peugeot',
+        '208',
+        1600,
+        28475,
+        2017,
+        'Hatchback',
+        '34 - SI -76 ',
+        ' Diesel '
+    ),
+    (
+        409,
+        ' Peugeot ',
+        ' 3008 ',
+        2000,
+        19485,
+        2017,
+        ' SUV ',
+        ' 76 - SU -93 ',
+        ' Diesel '
+    ),
+    (
+        410,
+        ' Audi ',
+        ' A4 ',
+        2.000,
+        28.950,
+        2016,
+        ' Carrinha ',
+        ' 59 - QE -89 ',
+        ' Diesel '
+    ),
+    (
+        411,
+        ' Audi ',
+        ' A3 ',
+        999,
+        22.900,
+        2018,
+        ' Hactback ',
+        ' 45 - UB -58 ',
+        ' Gasolina '
+    ),
+    (
+        412,
+        ' Audi ',
+        ' A5 ',
+        2.000,
+        25.950,
+        2016,
+        ' Sedan ',
+        ' 23 - QO -56 ',
+        ' Diesel '
+    ),
+    (
+        413,
+        ' Audi ',
+        ' Q7 ',
+        2.957,
+        69.900,
+        2017,
+        ' SUV ',
+        40 - Tl -20,
+        ' Diesel '
+    ),
+    (
+        414,
+        ' Audi ',
+        ' Q2 ',
+        1.598,
+        24.390,
+        2017,
+        ' SUV ',
+        ' 51 - TM -19 ',
+        ' Diesel '
+    ),
+    (
+        415,
+        ' Audi ',
+        ' A6 ',
+        1.968,
+        35.990,
+        2016,
+        ' Carrinha ',
+        ' 63 - SB -57 ',
+        ' Diesel'
+    ),
+    (
+        416,
+        ' Audi ',
+        ' A4 ',
+        2.000,
+        24.500,
+        2016,
+        ' Carrinha ',
+        ' 23-QF-45 ',
+        'Diesel '
+    ),
+    (
+        417,
+        ' Audi ',
+        ' A1 ',
+        1.400,
+        16.950,
+        2016,
+        ' Hactback ',
+        ' 48 - QD -89 ',
+        'Diesel '
+    ),
+    (
+        418,
+        ' Audi ',
+        ' A7 ',
+        3000,
+        67948,
+        2019,
+        ' Sedan ',
+        ' 48 - ZM -28 ',
+        ' Gasolina '
+    ),
+    (
+        419,
+        ' Audi ',
+        ' A1 ',
+        1200,
+        14790,
+        ' 2016 ',
+        ' Hatchback ',
+        '38 - QS -48',
+        ' Diesel '
+    ),
+    (
+        420,
+        ' Audi ',
+        ' A3 ',
+        1600,
+        18463,
+        ' 2018 ',
+        ' Hatchback ',
+        ' 85 - VU -83',
+        ' Diesel '
+    )
 
