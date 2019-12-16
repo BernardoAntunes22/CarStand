@@ -59,7 +59,7 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "Marca: " + marca + ", Modelo: " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco + ", Ano: "+ ano;
+		return marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco + ", Ano: "+ ano;
 	}
 
 }
