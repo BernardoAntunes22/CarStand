@@ -12,11 +12,17 @@ public class UserPaymentCompleteController {
 		this.loggedUser = loggedUser;
 	}
 	
+	/**
+	 * Após o pagamento o user pode fazer Logout 
+	 */
 	@FXML
 	private void backToLogin() {
 		WindowManager.backLogin();
 	}
 	
+	/**
+	 * Volta para a Lista de carros caso o User queira adquirir mais carros
+	 */
 	@FXML
 	private void backToMainView() {
 		WindowManager.backToUserMainView(loggedUser);

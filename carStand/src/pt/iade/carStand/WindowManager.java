@@ -34,7 +34,9 @@ final public class WindowManager {
 
 	private WindowManager() {}
 
-	//Abrir janela Principal de login
+	/**
+	 * Abrir janela Principal de login
+	 */
 	static public void openMainWindow() {
 		Parent root = createNodeTree("./views/LoginUserView.fxml", new LoginUserController());			
 		Scene scene = new Scene(root);
@@ -44,29 +46,44 @@ final public class WindowManager {
 	}
 
 // FAZENDO LOGIN PELO USER
-	//abre janela que mostra os carros
+	/**
+	 * abre janela que mostra os carros
+	 * @param loggedUser
+	 */
 	static public void openItemsWindow(User loggedUser) {
 		Parent root = createNodeTree("./views/UserMainView.fxml", new UserMainController(loggedUser));
 		primaryStage.getScene().setRoot(root);
 	}	
-	//Apos selecionar o carro passa para pagamento
+	/**
+	 * Apos selecionar o carro passa para pagamento
+	 * @param loggedUser
+	 * @param carToBuy
+	 */
 	static public void comprarWindow(User loggedUser, Car carToBuy) {
 		Parent root = createNodeTree("./views/UserPaymentView.fxml", new UserPaymentController(loggedUser,carToBuy));		
 		primaryStage.getScene().setRoot(root);
 	}	
-	//voltar atras no pagamento
+	/**
+	 * voltar atras no pagamento
+	 * @param loggedUser
+	 */
 	static public void backToUserMainView(User loggedUser) {
 		Parent root = createNodeTree("./views/UserMainView.fxml", new UserMainController(loggedUser));			
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
-	}	
-	//faz logout e volta ao login
+	}
+	/**
+	 * faz logout e volta ao login
+	 */
 	static public void backLogin() {
 		Parent root = createNodeTree("./views/LoginUserView.fxml", new LoginUserController());
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
 	}
-	//Abre confirmacao apos pagamento
+	/**
+	 * Abre confirmacao apos pagamento
+	 * @param loggedUser
+	 */
 	static public void openPaymentComplete(User loggedUser) {
 		Parent root = createNodeTree("./views/UserPaymentCompleteView.fxml", new UserPaymentCompleteController(loggedUser));
 		primaryStage.getScene().setRoot(root);
@@ -74,51 +91,75 @@ final public class WindowManager {
 	
 
 //FAZENDO LOGIN PELO COLAB
-	//passa do loginUser para o loginColab
+	/**
+	 * passa do loginUser para o loginColab
+	 */
 	static public void openColabWindow() {
 		Parent root = createNodeTree("./views/LoginColabView.fxml", new LoginColabController());			
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
 	}
-
-	//do login para o menu
+	/**
+	 * do login para o menu
+	 * @param loggedUser
+	 */
 	static public void openColabWindow(User loggedUser) {
 		Parent root = createNodeTree("./views/ColabMainView.fxml", new ColabMainController(loggedUser));
 		primaryStage.getScene().setRoot(root);
 	}
 	//do menu para o inventario
+	/**
+	 * @param loggedUser
+	 */
 	static public void inventarioWindow(User loggedUser) {
 		Parent root = createNodeTree("./views/ColabInventoryView.fxml", new ColabInventoryController(loggedUser));		
 		primaryStage.getScene().setRoot(root);
 	}
-	//do menu para a infoUser
+	/**
+	 * do menu para a infoUser
+	 * @param loggedUser
+	 */
 	static public void infoUserWindow(User loggedUser) {
 		Parent root = createNodeTree("./views/ColabInfoUserView.fxml", new ColabInfoUserController(loggedUser));		
 		primaryStage.getScene().setRoot(root);
 	}
-	//do menu para o addCar
+	/**
+	 * do menu para o addCar
+	 * @param loggedUser
+	 */
 	static public void addCarWindow(User loggedUser) {
 		Parent root = createNodeTree("./views/ColabAddCarView.fxml", new ColabAddCarController(loggedUser));		
 		primaryStage.getScene().setRoot(root);
 	}
-	//voltar atras em qualquer opção
+	/**
+	 * voltar atras em qualquer opção
+	 * @param loggedUser
+	 */
 	static public void backToColabMainView(User loggedUser) {
 		Parent root = createNodeTree("./views/ColabMainView.fxml", new ColabMainController(loggedUser));			
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
-	}	
-	//faz logout e volta ao login
+	}
+	/**
+	 * faz logout e volta ao login
+	 */
 	static public void backLoginColab() {
 		Parent root = createNodeTree("./views/LoginColabView.fxml", new LoginColabController());
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
 	}
-	//Adicionar completo
+	/**
+	 * Adicionar carro completo
+	 * @param loggedUser
+	 */
 	static public void openAddCarComplete(User loggedUser) {
 		Parent root = createNodeTree("./views/ColabAddCarCompleteView.fxml", new ColabAddCarCompleteController(loggedUser));
 		primaryStage.getScene().setRoot(root);
 	}
-	//volta para adicionar outro carro
+	/**
+	 * volta para adicionar outro carro
+	 * @param loggedUser
+	 */
 	static public void backToColabAddCarView(User loggedUser) {
 		Parent root = createNodeTree("./views/ColabAddCarView.fxml", new ColabAddCarController(loggedUser));			
 		if (root != null)

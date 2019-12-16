@@ -98,14 +98,4 @@
          </children>
       </GridPane>
    </bottom>
-   <top>
-      <Button mnemonicParsing="false" onAction="#backToMain" text="LOGOUT" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets left="430.0" top="5.0" />
-         </BorderPane.margin>
-         <font>
-            <Font name="System Bold" size="10.0" />
-         </font>
-      </Button>
-   </top>
 </BorderPane>

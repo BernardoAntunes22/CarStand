@@ -11,11 +11,17 @@ public class ColabInventoryController {
     	this.loggedUser = loggedUser;
 	}
 	
+    /**
+     * Faz logout e volta o login do colab
+     */
     @FXML
     private void backToMainColab() {
     	WindowManager.backLoginColab();
     	}
     
+    /**
+     * Serve para voltar ao menu principal do Colab
+     */
     @FXML
     void backToColabMainView() {
     	WindowManager.backToColabMainView(loggedUser);

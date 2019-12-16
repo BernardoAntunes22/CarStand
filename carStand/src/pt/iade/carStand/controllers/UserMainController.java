@@ -13,9 +13,15 @@ public class UserMainController {
 	
     private User loggedUser;
 
+    /**
+     * Id que faz mostrar a lista de carros
+     */
     @FXML
     private ListView<Car> listaCarros_LV;
     
+    /**
+     * Serve para mostrar a lista de carros atualizada da Base de dados
+     */
     @FXML
     private void initialize() {
     	listaCarros_LV.setItems(CarDAO.getCars());
@@ -25,11 +31,18 @@ public class UserMainController {
     	this.loggedUser = loggedUser;
     }
 	
+    /**
+     * Serve para fazer o Logout e volta ao Login do User
+     */
     @FXML
     private void backToMain() {
     	WindowManager.backLogin();
     	}
 
+    /**
+     * Após selecionar o carro o uso do botão serve para prosseguir para o pagamento
+     * @param event
+     */
     @FXML
     void comprar(ActionEvent event) {
     	WindowManager.comprarWindow(loggedUser, new Car());

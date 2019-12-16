@@ -11,16 +11,25 @@ public class ColabAddCarController {
     	this.loggedUser = loggedUser;
 	}
 	
+	/**
+	 * Após adicionar o carro mostra mensagem de sucesso 
+	 */
 	@FXML
 	private void openAddCarComplete() {
 		WindowManager.openAddCarComplete(loggedUser);
 	}
 	
+    /**
+     * Faz logout e volta o login do colab
+     */
     @FXML
     private void backToMainColab() {
     	WindowManager.backLoginColab();
     }
     
+    /**
+     * Serve para voltar ao menu principal do Colab
+     */
     @FXML
     void backToColabMainView() {
     	WindowManager.backToColabMainView(loggedUser);
