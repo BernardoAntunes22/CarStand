@@ -8,9 +8,11 @@ import pt.iade.carStand.models.User;
 public class UserPaymentController {
 
 	private User loggedUser;    
+	private Car carToBuy;
 
 	public UserPaymentController(User loggedUser, Car carToBuy) {
 		this.loggedUser = loggedUser;
+		this.carToBuy = carToBuy;
 	}
 
 	/**
@@ -18,6 +20,8 @@ public class UserPaymentController {
 	 */
 	@FXML
 	private void paymentComplete() {
+		
+		// chamar dao com id de user e de carro
 		WindowManager.openPaymentComplete(loggedUser);
 	}
 
@@ -28,5 +32,4 @@ public class UserPaymentController {
 	void backToUserMainView() {
 		WindowManager.backToUserMainView(loggedUser);
 	}	
-
 }

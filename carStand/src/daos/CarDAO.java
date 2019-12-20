@@ -26,8 +26,8 @@ public final class  CarDAO {
 				int cilindrada = rs.getInt("Cilindrada");
 				double preco = rs.getDouble("Preço");
 				int ano = rs.getInt("Ano");
-				
-				cars.add(new Car(marca,modelo,cilindrada,preco,ano));
+				int ID_Car= rs.getInt("ID_Car");
+				cars.add(new Car(ID_Car, marca,modelo,cilindrada,preco,ano));
 			}
 			
 		} catch(SQLException err) {

@@ -24,6 +24,7 @@ public class UserMainController {
      */
     @FXML
     private void initialize() {
+    	int nif = loggedUser.getNif();
     	listaCarros_LV.setItems(CarDAO.getCars());
     } 
     
@@ -45,7 +46,8 @@ public class UserMainController {
      */
     @FXML
     void comprar(ActionEvent event) {
-    	WindowManager.comprarWindow(loggedUser, new Car());
+    	Car car = listaCarros_LV.getSelectionModel().getSelectedItem(); 
+    	
+    	WindowManager.comprarWindow(loggedUser, car);
     }
-
 }

@@ -15,6 +15,7 @@ public class LoginUserController {
 	 */
 	@FXML
     private void entrar(ActionEvent event) {
+		loggedUser = new User("", "", 0, 234567897, "", "");
     	WindowManager.openItemsWindow(loggedUser);
     }  
 	
@@ -25,6 +26,4 @@ public class LoginUserController {
     private void openColab() {
     	WindowManager.openColabWindow();
     	} 
-	
-
 }
