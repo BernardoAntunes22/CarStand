@@ -9,7 +9,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import pt.iade.carStand.models.Car;
 
-public final class  CarDAO {
+public final class CarDAO {
 	private CarDAO () {}
 	
 	public static ObservableList<Car> getCars() {
@@ -27,7 +27,9 @@ public final class  CarDAO {
 				double preco = rs.getDouble("Preço");
 				int ano = rs.getInt("Ano");
 				int ID_Car= rs.getInt("ID_Car");
-				cars.add(new Car(ID_Car, marca,modelo,cilindrada,preco,ano));
+				String combustivel = rs.getString("Combustivel");
+				
+				cars.add(new Car(ID_Car, marca,modelo,cilindrada,preco,ano, combustivel));
 			}
 			
 		} catch(SQLException err) {

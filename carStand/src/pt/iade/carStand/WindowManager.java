@@ -17,7 +17,6 @@ import pt.iade.carStand.controllers.ColabInventoryController;
 import pt.iade.carStand.controllers.ColabMainController;
 import pt.iade.carStand.controllers.LoginColabController;
 import pt.iade.carStand.controllers.LoginUserController;
-import pt.iade.carStand.controllers.UserPaymentController;
 import pt.iade.carStand.models.Car;
 import pt.iade.carStand.models.Carlist;
 import pt.iade.carStand.models.User;
@@ -60,7 +59,7 @@ final public class WindowManager {
 	 * @param carToBuy
 	 */
 	static public void comprarWindow(User loggedUser, Car carToBuy) {
-		Parent root = createNodeTree("./views/UserPaymentView.fxml", new UserPaymentController(loggedUser,carToBuy));		
+		Parent root = createNodeTree("./views/UserPaymentCompleteView.fxml", new UserPaymentCompleteController(loggedUser));		
 		primaryStage.getScene().setRoot(root);
 	}	
 	/**
@@ -79,14 +78,6 @@ final public class WindowManager {
 		Parent root = createNodeTree("./views/LoginUserView.fxml", new LoginUserController());
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
-	}
-	/**
-	 * Abre confirmacao apos pagamento
-	 * @param loggedUser
-	 */
-	static public void openPaymentComplete(User loggedUser) {
-		Parent root = createNodeTree("./views/UserPaymentCompleteView.fxml", new UserPaymentCompleteController(loggedUser));
-		primaryStage.getScene().setRoot(root);
 	}
 	
 

@@ -35,6 +35,10 @@ public class ColabAddCarController {
 
     @FXML
     private TextField txtPreco;
+    
+    @FXML
+    private TextField txtCombustivel;
+
 
 	public ColabAddCarController(User loggedUser) {
 		this.loggedUser = loggedUser;
@@ -59,25 +63,25 @@ public class ColabAddCarController {
 				return false;
 			}
 		}	
-	}
+	} 
 
 	/**
 	 * Após adicionar o carro mostra mensagem de sucesso 
 	 */
 	@FXML
-	private void openAddCarComplete(ActionEvent evt) { //duvida evt
-		//WindowManager.openAddCarComplete(loggedUser);
+	private void openAddCarComplete(ActionEvent evt) {
 		if(checkInputs()) {			
 			try {
 				Connection conn = DBConnector.getConnection();
 					PreparedStatement ps = conn.prepareStatement(
-							"INSERT INTO Carro(Marca,Modelo,Cilindrada,Preço,Ano)" + "value(?,?,?,?,?) "
+							"INSERT INTO Carro(Marca,Modelo,Cilindrada,Preço,Ano, Combustivel)" + "value(?,?,?,?,?,?) "
 									, Statement.RETURN_GENERATED_KEYS);
 				ps.setString(1, txtMarca.getText());
 				ps.setString(2, txtModelo.getText());
 				ps.setInt(3, Integer.parseInt(txtCilindrada.getText()));
 				ps.setInt(4, Integer.parseInt(txtPreco.getText()));
 				ps.setInt(5, Integer.parseInt(txtAno.getText()));
+				ps.setString(6, txtCombustivel.getText());
 				ps.execute();
 				
 				WindowManager.openAddCarComplete(loggedUser);

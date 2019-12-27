@@ -25,5 +25,5 @@ public class LoginUserController {
     @FXML
     private void openColab() {
     	WindowManager.openColabWindow();
-    	} 
+    	}
 }
