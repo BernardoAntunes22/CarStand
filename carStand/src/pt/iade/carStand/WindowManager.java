@@ -170,5 +170,4 @@ final public class WindowManager {
 			return null;
 		}
 	}
-
 }

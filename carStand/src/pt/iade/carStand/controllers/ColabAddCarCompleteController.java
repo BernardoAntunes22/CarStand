@@ -8,9 +8,9 @@ public class ColabAddCarCompleteController {
 	private User loggedUser;   
 
 	public ColabAddCarCompleteController(User loggedUser) {
-    	this.loggedUser = loggedUser;		
+		this.loggedUser = loggedUser;		
 	}
-	
+
 	/**
 	 * Faz logout e volta o login do colab
 	 */
@@ -18,13 +18,12 @@ public class ColabAddCarCompleteController {
 	private void backToColabLogin() {
 		WindowManager.backLoginColab();
 	}
-	
+
 	/**
 	 * Serve para o colab poder adicionar mais um carro 
 	 */
 	@FXML
 	private void backToAddCar() {
 		WindowManager.backToColabAddCarView(loggedUser);
-	}	
-
+	}
 }

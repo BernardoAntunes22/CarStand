@@ -46,5 +46,4 @@ public class ColabMainController {
     void addCar(ActionEvent event) {
     	WindowManager.addCarWindow(loggedUser);
     }
-
 }

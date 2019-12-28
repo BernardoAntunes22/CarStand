@@ -17,7 +17,6 @@ public class LoginColabController {
 
     @FXML
     private PasswordField txtPass;
-
 	
     /**
      * Botão "USer" ser para voltar ao login do User
@@ -28,7 +27,7 @@ public class LoginColabController {
     	}
 
     /**
-     * Serve para o Colab fazer login no site
+     * Serve para os Colabs fazerem login no site
      * @param event 
      */
     @FXML
@@ -41,10 +40,7 @@ public class LoginColabController {
     			|| id.equals("branco") && pass.equals("789")) {
     		WindowManager.openColabWindow(loggedUser);
     	}else{
-    		JOptionPane.showMessageDialog(null, "Id ou Password incorretos");
-    	
-    	}    	    	
-    	
+    		JOptionPane.showMessageDialog(null, "Id ou Password incorretos");    	
+    	}    	
     }
-
 }

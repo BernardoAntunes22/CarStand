@@ -21,29 +21,29 @@ import pt.iade.carStand.models.User;
 public class ColabAddCarController {
 	private User loggedUser;    
 
-    @FXML
-    private TextField txtMarca;
+	@FXML
+	private TextField txtMarca;
 
-    @FXML
-    private TextField txtModelo;
+	@FXML
+	private TextField txtModelo;
 
-    @FXML
-    private TextField txtCilindrada;
+	@FXML
+	private TextField txtCilindrada;
 
-    @FXML
-    private TextField txtAno;
+	@FXML
+	private TextField txtAno;
 
-    @FXML
-    private TextField txtPreco;
-    
-    @FXML
-    private TextField txtCombustivel;
+	@FXML
+	private TextField txtPreco;
+
+	@FXML
+	private TextField txtCombustivel;
 
 
 	public ColabAddCarController(User loggedUser) {
 		this.loggedUser = loggedUser;
 	}
-	
+
 	// confirma se os inputs estao postos
 	public boolean checkInputs(){
 		if(txtMarca.getText() == null 
@@ -73,9 +73,9 @@ public class ColabAddCarController {
 		if(checkInputs()) {			
 			try {
 				Connection conn = DBConnector.getConnection();
-					PreparedStatement ps = conn.prepareStatement(
-							"INSERT INTO Carro(Marca,Modelo,Cilindrada,Preço,Ano, Combustivel)" + "value(?,?,?,?,?,?) "
-									, Statement.RETURN_GENERATED_KEYS);
+				PreparedStatement ps = conn.prepareStatement(
+						"INSERT INTO Carro(Marca,Modelo,Cilindrada,Preço,Ano, Combustivel)" + "value(?,?,?,?,?,?) "
+								, Statement.RETURN_GENERATED_KEYS);
 				ps.setString(1, txtMarca.getText());
 				ps.setString(2, txtModelo.getText());
 				ps.setInt(3, Integer.parseInt(txtCilindrada.getText()));
@@ -83,7 +83,7 @@ public class ColabAddCarController {
 				ps.setInt(5, Integer.parseInt(txtAno.getText()));
 				ps.setString(6, txtCombustivel.getText());
 				ps.execute();
-				
+
 				WindowManager.openAddCarComplete(loggedUser);
 
 			}catch(SQLException ex){

@@ -61,7 +61,7 @@ public class UserMainController {
     void reservar(ActionEvent event) {
     	Car car = listaCarros_LV.getSelectionModel().getSelectedItem();
     	
-    	if (!txtID.getText().equals("")) {    		
+    	if (!txtID.getText().equals("")) {
     		try {
     			Connection conn = DBConnector.getConnection();
 				PreparedStatement ps = conn.prepareStatement("DELETE FROM Carro WHERE ID_Car = ?");
@@ -73,11 +73,8 @@ public class UserMainController {
 			} catch (SQLException ex) {
 				Logger.getLogger(UserMainController.class.getName()).log(Level.SEVERE, null, ex);
 			}
-    		
     	}else {
     		JOptionPane.showMessageDialog(null, "Introduza um ID válido.");
     	}
-    	
-    	
     }
 }

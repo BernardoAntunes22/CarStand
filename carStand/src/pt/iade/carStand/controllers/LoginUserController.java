@@ -5,8 +5,7 @@ import javafx.fxml.FXML;
 import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.User;
 
-public class LoginUserController {
-	
+public class LoginUserController {	
 	private User loggedUser;
 	
 	/**
