@@ -55,7 +55,7 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "Nome: " + nome + ", Morada: " + morada + ", Telemóvel: " + telemovel + ", NIF: " + nif
+		return nome + ", Morada: " + morada + ", Telemóvel: " + telemovel + ", NIF: " + nif
 				+ ", Email: "+ email + ", Profissão: " + profissao;
 	}
 }

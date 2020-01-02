@@ -10,9 +10,7 @@ public class Car {
 	private double preco;
 	private String combustivel;
 	
-	//contrutor meramente para o CarListController funcionar
-
-	public Car(int ID_Car, String marca, String modelo, int cilindrada, double preco, int ano, String combustivel) {
+	public Car(int ID_Car, String marca, String modelo, int cilindrada, int preco, int ano, String combustivel) {
 		super();
 		this.ID_Car = ID_Car;
 		this.marca = marca;

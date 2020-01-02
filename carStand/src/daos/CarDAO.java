@@ -23,7 +23,7 @@ public final class CarDAO {
 				String marca = rs.getString("Marca");
 				String modelo = rs.getString("Modelo");
 				int cilindrada = rs.getInt("Cilindrada");
-				double preco = rs.getDouble("Preço");
+				int preco = rs.getInt("Preço");
 				int ano = rs.getInt("Ano");
 				int ID_Car= rs.getInt("ID_Car");
 				String combustivel = rs.getString("Combustivel");

@@ -46,16 +46,17 @@ public class ColabAddCarController {
 	// confirma se os inputs estao postos
 	public boolean checkInputs(){
 		if(txtMarca.getText() == null 
-				|| txtModelo.getText() == null 
-				|| txtCilindrada.getText() == null
-				|| txtAno.getText() == null	
-				|| txtPreco.getText() == null)
+				&& txtModelo.getText() == null 
+				&& txtCilindrada.getText() == null
+				&& txtAno.getText() == null	
+				&& txtPreco.getText() == null
+				&& txtCombustivel.getText() == null)
 		{		
 			return false;
 		}
 		else {
 			try {
-				Double.parseDouble(txtPreco.getText());
+				Integer.parseInt(txtPreco.getText());
 				return true;
 			}catch(Exception ex)
 			{
@@ -73,7 +74,7 @@ public class ColabAddCarController {
 			try {
 				Connection conn = DBConnector.getConnection();
 				PreparedStatement ps = conn.prepareStatement(
-						"INSERT INTO Carro(Marca,Modelo,Cilindrada,Preço,Ano, Combustivel)" + "value(?,?,?,?,?,?) "
+						"INSERT INTO Carro(Marca,Modelo,Cilindrada,Preço,Ano,Combustivel)" + "value(?,?,?,?,?,?) "
 								, Statement.RETURN_GENERATED_KEYS);
 				ps.setString(1, txtMarca.getText());
 				ps.setString(2, txtModelo.getText());
