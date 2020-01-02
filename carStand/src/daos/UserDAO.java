@@ -29,8 +29,7 @@ public final class UserDAO {
 				String profissao = rs.getString("Profissão");
 				
 				users.add(new User(nome,morada,telemovel,nif,email,profissao));
-			}
-			
+			}			
 		} catch(SQLException err) {
 			 err.printStackTrace();
 		}		

@@ -57,6 +57,5 @@ public class User {
 	public String toString() {
 		return "Nome: " + nome + ", Morada: " + morada + ", Telemóvel: " + telemovel + ", NIF: " + nif
 				+ ", Email: "+ email + ", Profissão: " + profissao;
-	}	
-	
+	}
 }

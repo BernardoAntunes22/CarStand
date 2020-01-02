@@ -1,6 +1,6 @@
 package pt.iade.carStand.models;
 
-public class Car {
+public class CarColab {
 	private int ID_Car;
 	private String marca;
 	private String modelo;
@@ -12,7 +12,7 @@ public class Car {
 	
 	//contrutor meramente para o CarListController funcionar
 
-	public Car(int ID_Car, String marca, String modelo, int cilindrada, double preco, int ano, String combustivel) {
+	public CarColab(int ID_Car, String marca, String modelo, int cilindrada, double preco, int ano, String combustivel) {
 		super();
 		this.ID_Car = ID_Car;
 		this.marca = marca;
@@ -73,4 +73,5 @@ public class Car {
 	public void setID_Car(int iD_Car) {
 		ID_Car = iD_Car;
 	}
+
 }

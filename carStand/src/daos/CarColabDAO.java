@@ -7,16 +7,16 @@ import java.sql.Statement;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import pt.iade.carStand.models.Car;
+import pt.iade.carStand.models.CarColab;
 
-public final class CarDAO {
-	private CarDAO () {}
-
-	public static ObservableList<Car> getCars() {
-		ObservableList<Car> cars = FXCollections.observableArrayList();
-
+public final class CarColabDAO {
+	private CarColabDAO () {}
+	
+	public static ObservableList<CarColab> getCarsColab() {
+		ObservableList<CarColab> carsColab = FXCollections.observableArrayList();
+		
 		Connection conn = DBConnector.getConnection();
-
+		
 		try (Statement stat = conn.createStatement();
 				ResultSet rs = stat.executeQuery("Select * from Carro")) {
 			while(rs.next()) {
@@ -27,12 +27,12 @@ public final class CarDAO {
 				int ano = rs.getInt("Ano");
 				int ID_Car= rs.getInt("ID_Car");
 				String combustivel = rs.getString("Combustivel");
-
-				cars.add(new Car(ID_Car, marca,modelo,cilindrada,preco,ano,combustivel));
-			}
+				
+				carsColab.add(new CarColab(ID_Car,marca,modelo,cilindrada,preco,ano,combustivel));
+			}			
 		} catch(SQLException err) {
-			err.printStackTrace();
+			 err.printStackTrace();
 		}		
-		return cars;
+		return carsColab;
 	}
 }

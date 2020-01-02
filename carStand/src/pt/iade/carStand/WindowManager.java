@@ -44,7 +44,7 @@ final public class WindowManager {
 		primaryStage.show();
 	}
 
-// FAZENDO LOGIN PELO USER
+	// FAZENDO LOGIN PELO USER
 	/**
 	 * abre janela que mostra os carros
 	 * @param loggedUser
@@ -79,9 +79,9 @@ final public class WindowManager {
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
 	}
-	
 
-//FAZENDO LOGIN PELO COLAB
+
+	//FAZENDO LOGIN PELO COLAB
 	/**
 	 * passa do loginUser para o loginColab
 	 */
@@ -156,7 +156,7 @@ final public class WindowManager {
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
 	}
-	
+
 
 	static public Parent createNodeTree(String viewPath, Object controller) {
 		try {

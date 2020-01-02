@@ -1,11 +1,9 @@
 package pt.iade.carStand.controllers;
 
-import daos.CarDAO;
 import daos.UserDAO;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import pt.iade.carStand.WindowManager;
-import pt.iade.carStand.models.Car;
 import pt.iade.carStand.models.User;
 
 public class ColabInfoUserController {

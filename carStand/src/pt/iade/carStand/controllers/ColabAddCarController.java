@@ -39,7 +39,6 @@ public class ColabAddCarController {
 	@FXML
 	private TextField txtCombustivel;
 
-
 	public ColabAddCarController(User loggedUser) {
 		this.loggedUser = loggedUser;
 	}
