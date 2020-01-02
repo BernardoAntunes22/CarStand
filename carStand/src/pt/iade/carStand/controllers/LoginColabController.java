@@ -31,13 +31,13 @@ public class LoginColabController {
      * @param event 
      */
     @FXML
-    void entrar(ActionEvent event) {
-    	String id = txtId.getText();
+    private void entrar(ActionEvent event) {
+    	String colab = txtId.getText();
     	String pass = txtPass.getText();
     	
-    	if (id.equals("diogo") && pass.equals("123")
-    			|| id.equals("antunes") && pass.equals("456")
-    			|| id.equals("branco") && pass.equals("789")) {
+    	if (colab.equals("diogo") && pass.equals("123")
+    			|| colab.equals("antunes") && pass.equals("456")
+    			|| colab.equals("branco") && pass.equals("789")) {
     		WindowManager.openColabWindow(loggedUser);
     	}else{
     		JOptionPane.showMessageDialog(null, "Id ou Password incorretos");    	
