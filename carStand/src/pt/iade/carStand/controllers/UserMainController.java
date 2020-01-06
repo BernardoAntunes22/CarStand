@@ -37,7 +37,7 @@ public class UserMainController {
 	 */
 	@FXML
 	private void initialize() {
-		int nif = loggedUser.getNif(); // nao esta a fazer nada
+		//int nif = loggedUser.getNif(); // nao esta a fazer nada
 		listaCarros_LV.setItems(CarDAO.getCars());
 	} 
 
@@ -59,12 +59,12 @@ public class UserMainController {
 	 */
 	@FXML
 	void reservar(ActionEvent event) {
-		Car car = listaCarros_LV.getSelectionModel().getSelectedItem(); // nao está a fazer nada
+		Car car = listaCarros_LV.getSelectionModel().getSelectedItem();
 
 		if (!txtID.getText().equals("")) {
 			try {
 				Connection conn = DBConnector.getConnection();
-				PreparedStatement ps = conn.prepareStatement("DELETE FROM Carro WHERE ID_Car = ?");
+				PreparedStatement ps = conn.prepareStatement("UPDATE Carro SET Estado='Reservado' WHERE ID_Car = ?");
 				int id = Integer.parseInt(txtID.getText());
 				ps.setInt(1, id);
 				ps.execute();

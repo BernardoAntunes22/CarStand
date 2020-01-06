@@ -12,6 +12,7 @@ import pt.iade.carStand.controllers.UserMainController;
 import pt.iade.carStand.controllers.UserPaymentCompleteController;
 import pt.iade.carStand.controllers.ColabAddCarCompleteController;
 import pt.iade.carStand.controllers.ColabAddCarController;
+import pt.iade.carStand.controllers.ColabCarPurchasedController;
 import pt.iade.carStand.controllers.ColabInfoUserController;
 import pt.iade.carStand.controllers.ColabInventoryController;
 import pt.iade.carStand.controllers.ColabMainController;
@@ -103,8 +104,9 @@ final public class WindowManager {
 	 * @param loggedUser
 	 */
 	static public void inventarioWindow(User loggedUser) {
-		Parent root = createNodeTree("./views/ColabInventoryView.fxml", new ColabInventoryController(loggedUser));		
-		primaryStage.getScene().setRoot(root);
+		Parent root = createNodeTree("./views/ColabInventoryView.fxml", new ColabInventoryController(loggedUser));
+		if (root != null)
+			primaryStage.getScene().setRoot(root);
 	}
 	/**
 	 * do menu para a infoUser
@@ -122,12 +124,30 @@ final public class WindowManager {
 		Parent root = createNodeTree("./views/ColabAddCarView.fxml", new ColabAddCarController(loggedUser));		
 		primaryStage.getScene().setRoot(root);
 	}
+	//do inventario para os CarrosVendidos
+	/**
+	 * @param loggedUser
+	 */
+	static public void GoToCarPurchasedWindow(User loggedUser) {
+		Parent root = createNodeTree("./views/ColabCarPurchasedView.fxml", new ColabCarPurchasedController(loggedUser));
+		if (root != null)
+			primaryStage.getScene().setRoot(root);
+	}
 	/**
 	 * voltar atras em qualquer opção
 	 * @param loggedUser
 	 */
 	static public void backToColabMainView(User loggedUser) {
 		Parent root = createNodeTree("./views/ColabMainView.fxml", new ColabMainController(loggedUser));			
+		if (root != null)
+			primaryStage.getScene().setRoot(root);	
+	}
+	/**
+	 * voltar atras para o inventario do colab
+	 * @param loggedUser
+	 */
+	static public void backToColabInventory(User loggedUser) {
+		Parent root = createNodeTree("./views/ColabInventoryView.fxml", new ColabInventoryController(loggedUser));			
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
 	}

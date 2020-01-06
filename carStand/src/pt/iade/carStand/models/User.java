@@ -1,21 +1,29 @@
 package pt.iade.carStand.models;
 
 public class User {
+	private int ID_Cliente;
 	private String nome;
 	private String morada;
 	private int telemovel;
 	private int nif;
 	private String email;
 	private String profissao; 	
-	
-	public User(String nome, String morada, int telemovel, int nif, String email, String profissao) {
+
+	public User(int ID_Cliente, String nome, String morada, int telemovel, int nif, String email, String profissao) {
 		super();
+		this.ID_Cliente = ID_Cliente;
 		this.nome = nome;
 		this.morada = morada;
 		this.telemovel = telemovel;
 		this.nif = nif;
 		this.email = email;
 		this.profissao = profissao;
+	}
+	public int getID_Cliente() {
+		return ID_Cliente;
+	}
+	public void setNome(int ID_Cliente) {
+		this.ID_Cliente = ID_Cliente;
 	}
 	public String getNome() {
 		return nome;

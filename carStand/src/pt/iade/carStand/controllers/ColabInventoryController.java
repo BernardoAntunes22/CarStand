@@ -1,9 +1,20 @@
 package pt.iade.carStand.controllers;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.swing.JOptionPane;
+
 import daos.CarColabDAO;
 import daos.CarDAO;
+import daos.DBConnector;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.Car;
 import pt.iade.carStand.models.CarColab;
@@ -15,6 +26,10 @@ public class ColabInventoryController {
 	public ColabInventoryController(User loggedUser) {
     	this.loggedUser = loggedUser;
 	}
+	
+    @FXML
+    private TextField txtID;
+
 	
     @FXML
     private ListView<CarColab> listaCarrosColab_LV;
@@ -39,7 +54,29 @@ public class ColabInventoryController {
      * Serve para voltar ao menu principal do Colab
      */
     @FXML
-    void backToColabMainView() {
+    private void backToColabMainView() {
     	WindowManager.backToColabMainView(loggedUser);
     }
+    /**
+     * Serve para voltar ao menu principal do Colab
+     */
+    @FXML
+    private void PurchasedCarWindow() {
+
+		if (!txtID.getText().equals("")) {
+			try {
+				Connection conn = DBConnector.getConnection();
+				PreparedStatement ps = conn.prepareStatement("UPDATE Carro SET Estado='Comprado' WHERE ID_Car = ?");
+				int id = Integer.parseInt(txtID.getText());
+				ps.setInt(1, id);
+				ps.execute();
+				WindowManager.GoToCarPurchasedWindow(loggedUser);
+
+			} catch (SQLException ex) {
+				Logger.getLogger(UserMainController.class.getName()).log(Level.SEVERE, null, ex);
+			}
+		}else {
+			JOptionPane.showMessageDialog(null, "Introduza um ID válido.");
+		}
+	}
 }

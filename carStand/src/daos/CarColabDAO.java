@@ -1,12 +1,14 @@
 package daos;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import pt.iade.carStand.models.Car;
 import pt.iade.carStand.models.CarColab;
 
 public final class CarColabDAO {
@@ -18,7 +20,7 @@ public final class CarColabDAO {
 		Connection conn = DBConnector.getConnection();
 		
 		try (Statement stat = conn.createStatement();
-				ResultSet rs = stat.executeQuery("Select * from Carro")) {
+				ResultSet rs = stat.executeQuery("Select * from Carro ORDER BY Estado")) {
 			while(rs.next()) {
 				String marca = rs.getString("Marca");
 				String modelo = rs.getString("Modelo");
@@ -27,8 +29,9 @@ public final class CarColabDAO {
 				int ano = rs.getInt("Ano");
 				int ID_Car= rs.getInt("ID_Car");
 				String combustivel = rs.getString("Combustivel");
+				String estado = rs.getString("Estado");
 				
-				carsColab.add(new CarColab(ID_Car,marca,modelo,cilindrada,preco,ano,combustivel));
+				carsColab.add(new CarColab(ID_Car,marca,modelo,cilindrada,preco,ano,combustivel, estado));
 			}			
 		} catch(SQLException err) {
 			 err.printStackTrace();

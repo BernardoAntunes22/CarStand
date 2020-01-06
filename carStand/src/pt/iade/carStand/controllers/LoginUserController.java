@@ -2,6 +2,7 @@ package pt.iade.carStand.controllers;
 
 import javax.swing.JOptionPane;
 
+import daos.UserDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -20,13 +21,11 @@ public class LoginUserController {
 	 */
 	@FXML
     private void entrar(ActionEvent event) {
-		loggedUser = new User("", "", 0, 234567897, "", "");
-    	String user = txtUser.getText();
-    	
-    	if (user.equals("igor") || user.equals("benjamin") || user.equals("maci")
-    			|| user.equals("lucille") || user.equals("siobhan") || user.equals("mikael")
-    			|| user.equals("hamza") || user.equals("rishi") || user.equals("salahuddin")
-    			|| user.equals("sapphire") || user.equals("Jareth")) {
+		String userName = txtUser.getText();
+		loggedUser = UserDAO.getUserByName(userName);
+	    
+    	if ( loggedUser != null)
+    	{
     		WindowManager.openItemsWindow(loggedUser);
     	}else{
     		JOptionPane.showMessageDialog(null, "Id inválido, tente novamente.");    	

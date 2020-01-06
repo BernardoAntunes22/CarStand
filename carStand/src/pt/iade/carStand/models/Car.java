@@ -7,10 +7,11 @@ public class Car {
 	private String cor;
 	private int cilindrada;
 	private int ano;
-	private double preco;
+	private int preco;
 	private String combustivel;
-	
-	public Car(int ID_Car, String marca, String modelo, int cilindrada, int preco, int ano, String combustivel) {
+	private String estado;
+
+	public Car(int ID_Car, String marca, String modelo, int cilindrada, int preco, int ano, String combustivel, String estado) {
 		super();
 		this.ID_Car = ID_Car;
 		this.marca = marca;
@@ -19,7 +20,8 @@ public class Car {
 		this.preco = preco; 
 		this.ano = ano;
 		this.combustivel = combustivel;
-		
+		this.estado = estado;
+
 	}
 	public String getMarca() {
 		return marca;
@@ -60,15 +62,21 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "ID-> " + ID_Car + " -- " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
-			 ", Ano: "+ ano + ", Combustivel: " + combustivel;
+		return "ID-> " + ID_Car + " - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
+				", Ano: "+ ano + ", Combustivel: " + combustivel;
 	}
 
 	public int getID_Car() {
 		return ID_Car;
 	}
- 
-	public void setID_Car(int iD_Car) {
-		ID_Car = iD_Car;
+
+	public void setID_Car(int ID_Car) {
+		this.ID_Car = ID_Car;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 }

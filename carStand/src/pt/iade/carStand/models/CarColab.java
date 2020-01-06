@@ -9,10 +9,11 @@ public class CarColab {
 	private int ano;
 	private double preco;
 	private String combustivel;
+	private String estado;
 	
 	//contrutor meramente para o CarListController funcionar
 
-	public CarColab(int ID_Car, String marca, String modelo, int cilindrada, double preco, int ano, String combustivel) {
+	public CarColab(int ID_Car, String marca, String modelo, int cilindrada, double preco, int ano, String combustivel, String estado) {
 		super();
 		this.ID_Car = ID_Car;
 		this.marca = marca;
@@ -21,6 +22,7 @@ public class CarColab {
 		this.preco = preco; 
 		this.ano = ano;
 		this.combustivel = combustivel;
+		this.estado = estado;
 		
 	}
 	public String getMarca() {
@@ -62,7 +64,7 @@ public class CarColab {
 
 	@Override
 	public String toString() {
-		return "ID-> " + ID_Car + " -- " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
+		return "ID-> " + ID_Car + " - " + estado + "--" + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
 			 ", Ano: "+ ano + ", Combustivel: " + combustivel;
 	}
 
@@ -72,6 +74,12 @@ public class CarColab {
  
 	public void setID_Car(int iD_Car) {
 		ID_Car = iD_Car;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 
 }

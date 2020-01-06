@@ -7,7 +7,7 @@ import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.User;
 
 public class ColabInfoUserController {
-	private User loggedUser;    
+	private User loggedUser;
 
 	/**
 	 * Id que faz mostrar a lista de clientes
