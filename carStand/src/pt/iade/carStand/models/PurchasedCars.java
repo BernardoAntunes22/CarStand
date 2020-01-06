@@ -1,6 +1,6 @@
 package pt.iade.carStand.models;
 
-public class CarColab {
+public class PurchasedCars {
 	private int ID_Car;
 	private String marca;
 	private String modelo;
@@ -11,7 +11,7 @@ public class CarColab {
 	private String combustivel;
 	private String estado;
 
-	public CarColab(int ID_Car, String marca, String modelo, int cilindrada, double preco, int ano, String combustivel, String estado) {
+	public PurchasedCars(int ID_Car, String marca, String modelo, int cilindrada, double preco, int ano, String combustivel, String estado) {
 		super();
 		this.ID_Car = ID_Car;
 		this.marca = marca;
