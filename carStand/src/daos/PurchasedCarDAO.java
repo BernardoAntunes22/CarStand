@@ -18,18 +18,18 @@ public class PurchasedCarDAO {
 		Connection conn = DBConnector.getConnection();
 		
 		try (Statement stat = conn.createStatement();
-				ResultSet rs = stat.executeQuery("Select * from Carro LEFT JOIN Cliente ON ID_Comprador = ID_Cliente WHERE Estado = 'Comprado' OR Estado = 'Reservado'")) {
+				ResultSet rs = stat.executeQuery("Select * from Carro LEFT JOIN Cliente ON ID_Comprador = ID_Cliente WHERE Car_Estado = 'Comprado' OR Car_Estado = 'Reservado'")) {
 			while(rs.next()) {
-				String marca = rs.getString("Marca");
-				String modelo = rs.getString("Modelo");
-				int cilindrada = rs.getInt("Cilindrada");
-				double preco = rs.getDouble("Preço");
-				int ano = rs.getInt("Ano");
+				String marca = rs.getString("Car_Marca");
+				String modelo = rs.getString("Car_Modelo");
+				int cilindrada = rs.getInt("Car_Cilindrada");
+				double preco = rs.getDouble("Car_Preço");
+				int ano = rs.getInt("Car_Ano");
 				int ID_Car= rs.getInt("ID_Car");
-				String combustivel = rs.getString("Combustivel");
-				String estado = rs.getString("Estado");
+				String combustivel = rs.getString("Car_Combustivel");
+				String estado = rs.getString("Car_Estado");
 				int ID_Comprador = rs.getInt("ID_Comprador");
-				String nome = rs.getString("Nome");
+				String nome = rs.getString("CL_Nome");
 				
 				carsPurchased.add(new PurchasedCar(ID_Car,marca,modelo,cilindrada,preco,ano,combustivel,estado,ID_Comprador,nome));
 			}			

@@ -70,7 +70,7 @@ public class ColabInventoryController {
 		if (!txtID.getText().equals("")) {
 			try {
 				Connection conn = DBConnector.getConnection();
-				PreparedStatement ps = conn.prepareStatement("UPDATE Carro SET Estado='Comprado' WHERE ID_Car = ?");
+				PreparedStatement ps = conn.prepareStatement("UPDATE Carro SET Car_Estado='Comprado' WHERE ID_Car = ?");
 				int id = Integer.parseInt(txtID.getText());
 				ps.setInt(1, id);
 				ps.execute();

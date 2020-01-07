@@ -9,9 +9,9 @@ public final class DBConnector {
 	/**
 	 * Conexão à base de dados
 	 */
-	private static final String URL ="jdbc:mysql://remotemysql.com:3306/b01PMoXIWq?useSSL=false";
-	private static final String PASS ="peKOLRcmOX";
-	private static final String USER ="b01PMoXIWq";
+	private static final String URL ="jdbc:mysql://remotemysql.com:3306/woNz7Lrwfr?useSSL=false";
+	private static final String PASS ="SmzVaWXIdl";
+	private static final String USER ="woNz7Lrwfr";
 
 	private static Connection connector;
 	private DBConnector () {

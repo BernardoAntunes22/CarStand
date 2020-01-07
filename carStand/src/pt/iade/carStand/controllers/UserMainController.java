@@ -63,7 +63,7 @@ public class UserMainController {
 		if (!txtID.getText().equals("")) {
 			try {
 				Connection conn = DBConnector.getConnection();
-				PreparedStatement ps = conn.prepareStatement("UPDATE Carro SET Estado='Reservado', ID_Comprador = ? WHERE ID_Car = ?");
+				PreparedStatement ps = conn.prepareStatement("UPDATE Carro SET Car_Estado='Reservado', ID_Comprador = ? WHERE ID_Car = ?");
 				int id = Integer.parseInt(txtID.getText());
 				ps.setInt(2, id);
 				ps.setInt(1, loggedUser.getID_Cliente());

@@ -74,7 +74,7 @@ public class ColabAddCarController {
 			try {
 				Connection conn = DBConnector.getConnection();
 				PreparedStatement ps = conn.prepareStatement(
-						"INSERT INTO Carro(Marca,Modelo,Cilindrada,Preço,Ano,Combustivel)" + "value(?,?,?,?,?,?) "
+						"INSERT INTO Carro(Car_Marca,Car_Modelo,Car_Cilindrada,Car_Preço,Car_Ano,Car_Combustivel)" + "value(?,?,?,?,?,?) "
 								, Statement.RETURN_GENERATED_KEYS);
 				ps.setString(1, txtMarca.getText());
 				ps.setString(2, txtModelo.getText());

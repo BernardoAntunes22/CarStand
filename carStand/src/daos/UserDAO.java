@@ -23,12 +23,12 @@ public final class UserDAO {
 				ResultSet rs = stat.executeQuery("Select * from Cliente")) {
 			while(rs.next()) {
 				int id = rs.getInt("ID_Cliente");
-				String nome = rs.getString("Nome");
-				String morada = rs.getString("Morada");
-				int telemovel = rs.getInt("NTelemóvel");
-				int nif = rs.getInt("NIF");
-				String email = rs.getString("Email");
-				String profissao = rs.getString("Profissão");
+				String nome = rs.getString("CL_Nome");
+				String morada = rs.getString("CL_Morada");
+				int telemovel = rs.getInt("CL_NTelemóvel");
+				int nif = rs.getInt("CL_NIF");
+				String email = rs.getString("CL_Email");
+				String profissao = rs.getString("CL_Profissão");
 
 				users.add(new User(id, nome,morada,telemovel,nif,email,profissao));
 			}			
@@ -42,16 +42,16 @@ public final class UserDAO {
 
 		Connection conn = DBConnector.getConnection();
 
-		try (PreparedStatement ps = conn.prepareStatement("Select * from Cliente WHERE Nome LIKE ?")) {
+		try (PreparedStatement ps = conn.prepareStatement("Select * from Cliente WHERE CL_Nome LIKE ?")) {
 			ps.setString(1, nome);
 			try (ResultSet rs = ps.executeQuery()) {
 				if(rs.next()) {
 					int id =  rs.getInt("ID_Cliente");
-					String morada = rs.getString("Morada");
-					int telemovel = rs.getInt("NTelemóvel");
-					int nif = rs.getInt("NIF");
-					String email = rs.getString("Email");
-					String profissao = rs.getString("Profissão");
+					String morada = rs.getString("CL_Morada");
+					int telemovel = rs.getInt("CL_NTelemóvel");
+					int nif = rs.getInt("CL_NIF");
+					String email = rs.getString("CL_Email");
+					String profissao = rs.getString("CL_Profissão");
 
 					return new User(id, nome,morada,telemovel,nif,email,profissao);
 				} else {

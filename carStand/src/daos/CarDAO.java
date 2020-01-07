@@ -18,16 +18,16 @@ public final class CarDAO {
 		Connection conn = DBConnector.getConnection();
 
 		try (Statement stat = conn.createStatement();
-				ResultSet rs = stat.executeQuery("Select * from Carro where Estado LIKE 'Disponível'")) {
+				ResultSet rs = stat.executeQuery("Select * from Carro where Car_Estado LIKE 'Disponível'")) {
 			while(rs.next()) {
-				String marca = rs.getString("Marca");
-				String modelo = rs.getString("Modelo");
-				int cilindrada = rs.getInt("Cilindrada");
-				int preco = rs.getInt("Preço");
-				int ano = rs.getInt("Ano");
+				String marca = rs.getString("Car_Marca");
+				String modelo = rs.getString("Car_Modelo");
+				int cilindrada = rs.getInt("Car_Cilindrada");
+				int preco = rs.getInt("Car_Preço");
+				int ano = rs.getInt("Car_Ano");
 				int ID_Car= rs.getInt("ID_Car");
-				String combustivel = rs.getString("Combustivel");
-				String estado = rs.getString("Estado");
+				String combustivel = rs.getString("Car_Combustivel");
+				String estado = rs.getString("Car_Estado");
 
 				cars.add(new Car(ID_Car, marca,modelo,cilindrada,preco,ano,combustivel,estado));
 			}
