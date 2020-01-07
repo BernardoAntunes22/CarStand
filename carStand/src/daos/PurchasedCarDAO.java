@@ -8,17 +8,17 @@ import java.sql.Statement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import pt.iade.carStand.models.CarColab;
-import pt.iade.carStand.models.PurchasedCars;
+import pt.iade.carStand.models.PurchasedCar;
 
 public class PurchasedCarDAO {
 	private PurchasedCarDAO () {}
-	public static ObservableList<PurchasedCars> getPurchasedCars() {
-		ObservableList<PurchasedCars> carsPurchased = FXCollections.observableArrayList();
+	public static ObservableList<PurchasedCar> getPurchasedCars() {
+		ObservableList<PurchasedCar> carsPurchased = FXCollections.observableArrayList();
 		
 		Connection conn = DBConnector.getConnection();
 		
 		try (Statement stat = conn.createStatement();
-				ResultSet rs = stat.executeQuery("Select * from Carro WHERE Estado = 'Comprado' OR Estado = 'Reservado'")) {
+				ResultSet rs = stat.executeQuery("Select * from Carro LEFT JOIN Cliente ON ID_Comprador = ID_Cliente WHERE Estado = 'Comprado' OR Estado = 'Reservado'")) {
 			while(rs.next()) {
 				String marca = rs.getString("Marca");
 				String modelo = rs.getString("Modelo");
@@ -29,8 +29,9 @@ public class PurchasedCarDAO {
 				String combustivel = rs.getString("Combustivel");
 				String estado = rs.getString("Estado");
 				int ID_Comprador = rs.getInt("ID_Comprador");
+				String nome = rs.getString("Nome");
 				
-				carsPurchased.add(new PurchasedCars(ID_Car,marca,modelo,cilindrada,preco,ano,combustivel,estado,ID_Comprador));
+				carsPurchased.add(new PurchasedCar(ID_Car,marca,modelo,cilindrada,preco,ano,combustivel,estado,ID_Comprador,nome));
 			}			
 		} catch(SQLException err) {
 			 err.printStackTrace();

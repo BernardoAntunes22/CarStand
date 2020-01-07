@@ -1,6 +1,6 @@
 package pt.iade.carStand.models;
 
-public class PurchasedCars {
+public class PurchasedCar {
 	private int ID_Car;
 	private String marca;
 	private String modelo;
@@ -11,9 +11,10 @@ public class PurchasedCars {
 	private String combustivel;
 	private String estado;
 	private int ID_Comprador;
+	private String nome;
 
-	public PurchasedCars(int ID_Car, String marca, String modelo, int cilindrada, double preco, int ano, String combustivel, 
-			String estado, int ID_Comprador) {
+	public PurchasedCar(int ID_Car, String marca, String modelo, int cilindrada, double preco, int ano, String combustivel, 
+			String estado, int ID_Comprador, String nome) {
 		super();
 		this.ID_Car = ID_Car;
 		this.marca = marca;
@@ -24,6 +25,7 @@ public class PurchasedCars {
 		this.combustivel = combustivel;
 		this.estado = estado;
 		this.ID_Comprador = ID_Comprador;
+		this.nome = nome;
 
 	}
 	public String getMarca() {
@@ -84,7 +86,7 @@ public class PurchasedCars {
 	}
 	@Override
 	public String toString() {
-		return "Carro-> " + ID_Car + " - " + estado + " por " + ID_Comprador + " - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
+		return "Carro-> " + ID_Car + " - " + estado + " por " + nome +" ("+ID_Comprador+") - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
 				", Ano: "+ ano + ", Combustivel: " + combustivel;
 	}
 }
