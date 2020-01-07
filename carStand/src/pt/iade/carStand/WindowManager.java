@@ -113,8 +113,9 @@ final public class WindowManager {
 	 * @param loggedUser
 	 */
 	static public void infoUserWindow(User loggedUser) {
-		Parent root = createNodeTree("./views/ColabInfoUserView.fxml", new ColabInfoUserController(loggedUser));		
-		primaryStage.getScene().setRoot(root);
+		Parent root = createNodeTree("./views/ColabInfoUserView.fxml", new ColabInfoUserController(loggedUser));
+		if (root != null)
+			primaryStage.getScene().setRoot(root);
 	}
 	/**
 	 * do menu para o addCar

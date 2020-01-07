@@ -23,7 +23,7 @@
       </ListView>
    </left>
    <top>
-      <Label text="Carros Comprados" BorderPane.alignment="CENTER">
+      <Label text="Comprados e Reservados" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets top="25.0" />
          </BorderPane.margin>

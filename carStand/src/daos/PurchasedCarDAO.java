@@ -18,7 +18,7 @@ public class PurchasedCarDAO {
 		Connection conn = DBConnector.getConnection();
 		
 		try (Statement stat = conn.createStatement();
-				ResultSet rs = stat.executeQuery("Select * from Carro WHERE Estado = 'Comprado'")) {
+				ResultSet rs = stat.executeQuery("Select * from Carro WHERE Estado = 'Comprado' OR Estado = 'Reservado'")) {
 			while(rs.next()) {
 				String marca = rs.getString("Marca");
 				String modelo = rs.getString("Modelo");
@@ -28,13 +28,13 @@ public class PurchasedCarDAO {
 				int ID_Car= rs.getInt("ID_Car");
 				String combustivel = rs.getString("Combustivel");
 				String estado = rs.getString("Estado");
+				int ID_Comprador = rs.getInt("ID_Comprador");
 				
-				carsPurchased.add(new PurchasedCars(ID_Car,marca,modelo,cilindrada,preco,ano,combustivel, estado));
+				carsPurchased.add(new PurchasedCars(ID_Car,marca,modelo,cilindrada,preco,ano,combustivel,estado,ID_Comprador));
 			}			
 		} catch(SQLException err) {
 			 err.printStackTrace();
 		}		
 		return carsPurchased;
 	}
-
 }

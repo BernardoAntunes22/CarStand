@@ -1,11 +1,8 @@
 package pt.iade.carStand.controllers;
 
-import daos.CarColabDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ListView;
 import pt.iade.carStand.WindowManager;
-import pt.iade.carStand.models.CarColab;
 import pt.iade.carStand.models.User;
 
 public class ColabMainController {	

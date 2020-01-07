@@ -16,7 +16,6 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.Car;
-import pt.iade.carStand.models.Carlist;
 import pt.iade.carStand.models.User;
 
 public class UserMainController {
@@ -64,9 +63,10 @@ public class UserMainController {
 		if (!txtID.getText().equals("")) {
 			try {
 				Connection conn = DBConnector.getConnection();
-				PreparedStatement ps = conn.prepareStatement("UPDATE Carro SET Estado='Reservado' WHERE ID_Car = ?");
+				PreparedStatement ps = conn.prepareStatement("UPDATE Carro SET Estado='Reservado', ID_Comprador = ? WHERE ID_Car = ?");
 				int id = Integer.parseInt(txtID.getText());
-				ps.setInt(1, id);
+				ps.setInt(2, id);
+				ps.setInt(1, loggedUser.getID_Cliente());
 				ps.execute();
 				WindowManager.comprarWindow(loggedUser, car);
 

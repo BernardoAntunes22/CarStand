@@ -31,7 +31,7 @@ public final class CarColabDAO {
 				String combustivel = rs.getString("Combustivel");
 				String estado = rs.getString("Estado");
 				
-				carsColab.add(new CarColab(ID_Car,marca,modelo,cilindrada,preco,ano,combustivel, estado));
+				carsColab.add(new CarColab(ID_Car,marca,modelo,cilindrada,preco,ano,combustivel,estado));
 			}			
 		} catch(SQLException err) {
 			 err.printStackTrace();

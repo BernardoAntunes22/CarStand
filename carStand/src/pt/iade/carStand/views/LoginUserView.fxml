@@ -62,7 +62,7 @@
    <bottom>
       <Button mnemonicParsing="false" onAction="#openColab" prefHeight="25.0" prefWidth="127.0" text="COLABORADOR" BorderPane.alignment="CENTER">
          <BorderPane.margin>
-            <Insets bottom="10.0" left="10.0" right="380.0" />
+            <Insets bottom="10.0" left="10.0" right="450.0" />
          </BorderPane.margin>
       </Button>
    </bottom>

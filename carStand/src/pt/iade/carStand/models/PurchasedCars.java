@@ -10,8 +10,10 @@ public class PurchasedCars {
 	private double preco;
 	private String combustivel;
 	private String estado;
+	private int ID_Comprador;
 
-	public PurchasedCars(int ID_Car, String marca, String modelo, int cilindrada, double preco, int ano, String combustivel, String estado) {
+	public PurchasedCars(int ID_Car, String marca, String modelo, int cilindrada, double preco, int ano, String combustivel, 
+			String estado, int ID_Comprador) {
 		super();
 		this.ID_Car = ID_Car;
 		this.marca = marca;
@@ -21,7 +23,8 @@ public class PurchasedCars {
 		this.ano = ano;
 		this.combustivel = combustivel;
 		this.estado = estado;
-		
+		this.ID_Comprador = ID_Comprador;
+
 	}
 	public String getMarca() {
 		return marca;
@@ -59,17 +62,11 @@ public class PurchasedCars {
 	public void setPreco(int preco) {
 		this.preco = preco;
 	}
-
-	@Override
-	public String toString() {
-		return "ID-> " + ID_Car + " - " + estado + "--" + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
-			 ", Ano: "+ ano + ", Combustivel: " + combustivel;
-	}
-
+	
 	public int getID_Car() {
 		return ID_Car;
 	}
- 
+
 	public void setID_Car(int iD_Car) {
 		ID_Car = iD_Car;
 	}
@@ -78,5 +75,16 @@ public class PurchasedCars {
 	}
 	public void setEstado(String estado) {
 		this.estado = estado;
+	}
+	public int getID_Comprador() {
+		return ID_Comprador;
+	}
+	public void setID_Comprador(int ID_Comprador) {
+		this.ID_Comprador = ID_Comprador;
+	}
+	@Override
+	public String toString() {
+		return "Carro-> " + ID_Car + " - " + estado + " por " + ID_Comprador + " - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
+				", Ano: "+ ano + ", Combustivel: " + combustivel;
 	}
 }

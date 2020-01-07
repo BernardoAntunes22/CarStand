@@ -32,7 +32,7 @@
             </Button>
             <Button mnemonicParsing="false" onAction="#backToLogin" text="Logout" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
-                  <Insets left="170.0" />
+                  <Insets left="215.0" />
                </GridPane.margin>
                <font>
                   <Font name="System Bold" size="13.0" />

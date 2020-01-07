@@ -57,6 +57,10 @@ public class ColabInventoryController {
     private void backToColabMainView() {
     	WindowManager.backToColabMainView(loggedUser);
     }
+    @FXML
+    void listaCarrosComprados(ActionEvent event) {
+    	WindowManager.GoToCarPurchasedWindow(loggedUser);
+    }
     /**
      * Serve para voltar ao menu principal do Colab
      */

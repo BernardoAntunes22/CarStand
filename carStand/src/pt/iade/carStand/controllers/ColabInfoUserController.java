@@ -42,4 +42,9 @@ public class ColabInfoUserController {
 	void backToColabMainView() {
 		WindowManager.backToColabMainView(loggedUser);
 	}    
+	
+    @FXML
+    void backToColabInventory() {
+    	WindowManager.backToColabMainView(loggedUser);
+    }
 }

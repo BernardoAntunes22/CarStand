@@ -62,7 +62,7 @@ public class CarColab {
 
 	@Override
 	public String toString() {
-		return "ID-> " + ID_Car + " - " + estado + "--" + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
+		return "IDCarro-> " + ID_Car + " - " + estado + " - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
 			 ", Ano: "+ ano + ", Combustivel: " + combustivel;
 	}
 
