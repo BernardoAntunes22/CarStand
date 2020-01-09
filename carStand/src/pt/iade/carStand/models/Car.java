@@ -60,12 +60,6 @@ public class Car {
 		this.preco = preco;
 	}
 
-	@Override
-	public String toString() {
-		return "ID-> " + ID_Car + " - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
-				", Ano: "+ ano + ", Combustivel: " + combustivel;
-	}
-
 	public int getID_Car() {
 		return ID_Car;
 	}
@@ -78,5 +72,11 @@ public class Car {
 	}
 	public void setEstado(String estado) {
 		this.estado = estado;
+	}
+	
+	@Override
+	public String toString() {
+		return "ID-> " + ID_Car + " - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
+				", Ano: "+ ano + ", Combustivel: " + combustivel;
 	}
 }

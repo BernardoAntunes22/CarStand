@@ -9,14 +9,12 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 import daos.CarColabDAO;
-import daos.CarDAO;
 import daos.DBConnector;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import pt.iade.carStand.WindowManager;
-import pt.iade.carStand.models.Car;
 import pt.iade.carStand.models.CarColab;
 import pt.iade.carStand.models.User;
 

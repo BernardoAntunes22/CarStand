@@ -64,7 +64,7 @@ public class PurchasedCar {
 	public void setPreco(int preco) {
 		this.preco = preco;
 	}
-	
+
 	public int getID_Car() {
 		return ID_Car;
 	}
@@ -84,6 +84,7 @@ public class PurchasedCar {
 	public void setID_Comprador(int ID_Comprador) {
 		this.ID_Comprador = ID_Comprador;
 	}
+	
 	@Override
 	public String toString() {
 		return "Carro-> " + ID_Car + " - " + estado + " por " + nome +" ("+ID_Comprador+") - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +

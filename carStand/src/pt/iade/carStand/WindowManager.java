@@ -19,10 +19,7 @@ import pt.iade.carStand.controllers.ColabMainController;
 import pt.iade.carStand.controllers.LoginColabController;
 import pt.iade.carStand.controllers.LoginUserController;
 import pt.iade.carStand.models.Car;
-import pt.iade.carStand.models.Carlist;
 import pt.iade.carStand.models.User;
-import pt.iade.carStand.controllers.UserMainController;
-import pt.iade.carStand.models.Carlist;
 
 final public class WindowManager {
 
@@ -80,7 +77,6 @@ final public class WindowManager {
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
 	}
-
 
 	//FAZENDO LOGIN PELO COLAB
 	/**
@@ -177,7 +173,6 @@ final public class WindowManager {
 		if (root != null)
 			primaryStage.getScene().setRoot(root);	
 	}
-
 
 	static public Parent createNodeTree(String viewPath, Object controller) {
 		try {

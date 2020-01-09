@@ -60,12 +60,6 @@ public class CarColab {
 		this.preco = preco;
 	}
 
-	@Override
-	public String toString() {
-		return "IDCarro-> " + ID_Car + " - " + estado + " - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
-			 ", Ano: "+ ano + ", Combustivel: " + combustivel;
-	}
-
 	public int getID_Car() {
 		return ID_Car;
 	}
@@ -78,5 +72,11 @@ public class CarColab {
 	}
 	public void setEstado(String estado) {
 		this.estado = estado;
+	}
+	
+	@Override
+	public String toString() {
+		return "IDCarro-> " + ID_Car + " - " + estado + " - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
+			 ", Ano: "+ ano + ", Combustivel: " + combustivel;
 	}
 }

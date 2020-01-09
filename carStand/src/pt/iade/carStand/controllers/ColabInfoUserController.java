@@ -9,6 +9,10 @@ import pt.iade.carStand.models.User;
 public class ColabInfoUserController {
 	private User loggedUser;
 
+	public ColabInfoUserController(User loggedUser) {
+		this.loggedUser = loggedUser;
+	}
+
 	/**
 	 * Id que faz mostrar a lista de clientes
 	 */
@@ -21,10 +25,6 @@ public class ColabInfoUserController {
 	@FXML
 	private void initialize() {
 		listaClientes_LV.setItems(UserDAO.getUsers());
-	}
-
-	public ColabInfoUserController(User loggedUser) {
-		this.loggedUser = loggedUser;
 	}
 
 	/**
@@ -42,9 +42,9 @@ public class ColabInfoUserController {
 	void backToColabMainView() {
 		WindowManager.backToColabMainView(loggedUser);
 	}    
-	
-    @FXML
-    void backToColabInventory() {
-    	WindowManager.backToColabMainView(loggedUser);
-    }
+
+	@FXML
+	void backToColabInventory() {
+		WindowManager.backToColabMainView(loggedUser);
+	}
 }

@@ -24,7 +24,7 @@ public class LoginUserController {
 		String userName = txtUser.getText();
 		loggedUser = UserDAO.getUserByName(userName);
 	    
-    	if ( loggedUser != null)
+    	if (loggedUser != null)
     	{
     		WindowManager.openItemsWindow(loggedUser);
     	}else{

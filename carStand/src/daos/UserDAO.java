@@ -8,12 +8,15 @@ import java.sql.Statement;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import pt.iade.carStand.models.Car;
 import pt.iade.carStand.models.User;
 
 public final class UserDAO {
 	private UserDAO () {}
 
+	/**
+	 * Serve para mostrar a lista de clientes ao colaborador com todas as informações necessárias 
+	 * @return
+	 */
 	public static ObservableList<User> getUsers() {
 		ObservableList<User> users = FXCollections.observableArrayList();
 

@@ -61,6 +61,7 @@ public class User {
 	public void setProfissao(String profissao) {
 		this.profissao = profissao;
 	}
+	
 	@Override
 	public String toString() {
 		return nome + ", Morada: " + morada + ", Telemóvel: " + telemovel + ", NIF: " + nif

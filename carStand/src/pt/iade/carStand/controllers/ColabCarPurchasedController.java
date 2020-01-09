@@ -8,11 +8,15 @@ import pt.iade.carStand.models.PurchasedCar;
 import pt.iade.carStand.models.User;
 
 public class ColabCarPurchasedController {
-	private User loggedUser;  
+	private User loggedUser;
 	
-    @FXML
-    private ListView<PurchasedCar> listaCarrosCompradosColab_LV;
-	
+	public ColabCarPurchasedController(User loggedUser) {
+		this.loggedUser = loggedUser;
+	}
+
+	@FXML
+	private ListView<PurchasedCar> listaCarrosCompradosColab_LV;
+
 	/**
 	 * Serve para mostrar a lista de carros atualizada da Base de dados
 	 */
@@ -20,10 +24,7 @@ public class ColabCarPurchasedController {
 	private void initialize() {
 		listaCarrosCompradosColab_LV.setItems(PurchasedCarDAO.getPurchasedCars());
 	}
-	
-	public ColabCarPurchasedController(User loggedUser) {
-    	this.loggedUser = loggedUser;
-	}
+
 	/**
 	 * Serve para voltar ao menu principal do Colab
 	 */

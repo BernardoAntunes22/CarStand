@@ -12,6 +12,10 @@ import pt.iade.carStand.models.Car;
 public final class CarDAO {
 	private CarDAO () {}
 
+	/**
+	 * Serve para mostrar a lista de carros disponivel no momento ao User
+	 * @return
+	 */
 	public static ObservableList<Car> getCars() {
 		ObservableList<Car> cars = FXCollections.observableArrayList();
 

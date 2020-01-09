@@ -7,18 +7,22 @@ import java.sql.Statement;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import pt.iade.carStand.models.CarColab;
 import pt.iade.carStand.models.PurchasedCar;
 
 public class PurchasedCarDAO {
 	private PurchasedCarDAO () {}
+	/**
+	 * serve para mostrar a lista de carros reservados/comprados
+	 * @return
+	 */
 	public static ObservableList<PurchasedCar> getPurchasedCars() {
 		ObservableList<PurchasedCar> carsPurchased = FXCollections.observableArrayList();
 		
 		Connection conn = DBConnector.getConnection();
 		
 		try (Statement stat = conn.createStatement();
-				ResultSet rs = stat.executeQuery("Select * from Carro LEFT JOIN Cliente ON ID_Comprador = ID_Cliente WHERE Car_Estado = 'Comprado' OR Car_Estado = 'Reservado'")) {
+				ResultSet rs = stat.executeQuery("Select * from Carro LEFT JOIN Cliente ON ID_Comprador = ID_Cliente "
+						+ "WHERE Car_Estado = 'Comprado' OR Car_Estado = 'Reservado' ORDER BY Car_Estado")) {
 			while(rs.next()) {
 				String marca = rs.getString("Car_Marca");
 				String modelo = rs.getString("Car_Modelo");

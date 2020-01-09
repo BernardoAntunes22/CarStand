@@ -1,19 +1,21 @@
 package daos;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import pt.iade.carStand.models.Car;
 import pt.iade.carStand.models.CarColab;
 
 public final class CarColabDAO {
 	private CarColabDAO () {}
 	
+	/**
+	 * Serve para mostrar a lista de carros atualizada no inventário do colaborador
+	 * @return
+	 */
 	public static ObservableList<CarColab> getCarsColab() {
 		ObservableList<CarColab> carsColab = FXCollections.observableArrayList();
 		

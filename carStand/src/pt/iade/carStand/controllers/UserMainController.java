@@ -24,7 +24,10 @@ public class UserMainController {
 	private TextField txtID;
 
 	private User loggedUser;
-
+	
+	public UserMainController(User loggedUser) {
+		this.loggedUser = loggedUser;
+	}
 	/**
 	 * Id que faz mostrar a lista de carros
 	 */
@@ -39,11 +42,7 @@ public class UserMainController {
 		//int nif = loggedUser.getNif(); // nao esta a fazer nada
 		listaCarros_LV.setItems(CarDAO.getCars());
 	} 
-
-	public UserMainController(User loggedUser) {
-		this.loggedUser = loggedUser;
-	}
-
+	
 	/**
 	 * Serve para fazer o Logout e volta ao Login do User
 	 */
@@ -53,7 +52,8 @@ public class UserMainController {
 	}
 
 	/**
-	 * Após selecionar o carro o uso do botão serve para prosseguir para o pagamento
+	 * Após inserir o ID do carro pretendido o botão fará com que a reserva seja realizada
+	 * De modo a que o colaborador consiga ver os carros que estão reservados para futuramente proseeguir com a compra
 	 * @param event
 	 */
 	@FXML

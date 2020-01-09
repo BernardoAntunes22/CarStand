@@ -2,7 +2,6 @@ package pt.iade.carStand.controllers;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,6 +16,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.User;
+
 
 public class ColabAddCarController {
 	private User loggedUser;    
@@ -42,8 +42,11 @@ public class ColabAddCarController {
 	public ColabAddCarController(User loggedUser) {
 		this.loggedUser = loggedUser;
 	}
-
-	// confirma se os inputs estao postos
+	
+	/**
+	 * confirma se todos inputs no preenchimento do carro estao preenchidos
+	 * @return
+	 */
 	public boolean checkInputs(){
 		if(txtMarca.getText() == null 
 				&& txtModelo.getText() == null 
@@ -66,7 +69,9 @@ public class ColabAddCarController {
 	} 
 
 	/**
-	 * Após adicionar o carro mostra mensagem de sucesso 
+	 * Função que serve para adicionar um carro á base de dados 
+	 * Se esta correr correr como previsto irá adicionar e mostra uma mensagem de sucesso
+	 * Caso não irá mostrar que uma mensagem em como algo está errado 
 	 */
 	@FXML
 	private void openAddCarComplete(ActionEvent evt) {
