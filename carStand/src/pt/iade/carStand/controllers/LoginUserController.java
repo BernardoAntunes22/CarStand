@@ -11,32 +11,32 @@ import pt.iade.carStand.models.User;
 
 public class LoginUserController {	
 	private User loggedUser;
-	
-    @FXML
-    private TextField txtUser;
 
+	@FXML
+	private TextField txtUser;
+
+	/**
+	 * Botão "Colab" para voltar ao login do Colab
+	 */
+	@FXML
+	private void openColab() {
+		WindowManager.openUserWindow();
+	}
+	
 	/**
 	 * Serve para o User fazer login no site
 	 * @param event
 	 */
 	@FXML
-    private void entrar(ActionEvent event) {
+	private void entrar(ActionEvent event) {
 		String userName = txtUser.getText();
 		loggedUser = UserDAO.getUserByName(userName);
-	    
-    	if (loggedUser != null)
-    	{
-    		WindowManager.openItemsWindow(loggedUser);
-    	}else{
-    		JOptionPane.showMessageDialog(null, "Id inválido, tente novamente.");    	
-    	}    	
-    } 
-	
-    /**
-     * Botão "Colab" ser para voltar ao login do Colab
-     */
-    @FXML
-    private void openColab() {
-    	WindowManager.openColabWindow();
-    	}
+
+		if (loggedUser != null)
+		{
+			WindowManager.openItemsWindow(loggedUser);
+		}else{
+			JOptionPane.showMessageDialog(null, "Id inválido, tente novamente.");    	
+		}    	
+	}
 }

@@ -7,10 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import pt.iade.carStand.WindowManager;
-import pt.iade.carStand.models.User;
 
 public class LoginColabController {
-	private User loggedUser;
 	
     @FXML
     private TextField txtId;
@@ -19,7 +17,7 @@ public class LoginColabController {
     private PasswordField txtPass;
 	
     /**
-     * Botão "USer" ser para voltar ao login do User
+     * Botão "User" para voltar ao login do User
      */
     @FXML
     private void backToMain() {
@@ -38,7 +36,7 @@ public class LoginColabController {
     	if (colab.equals("diogo") && pass.equals("123")
     			|| colab.equals("antunes") && pass.equals("456")
     			|| colab.equals("branco") && pass.equals("789")) {
-    		WindowManager.openColabWindow(loggedUser);
+    		WindowManager.openColabWindow();
     	}else{
     		JOptionPane.showMessageDialog(null, "Id ou Password incorretos");    	
     	}    	

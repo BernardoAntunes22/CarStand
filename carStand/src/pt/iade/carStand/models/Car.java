@@ -1,5 +1,9 @@
 package pt.iade.carStand.models;
 
+/**
+ * Classe criada para que atraves desta possamos utilizar grande parte das utilidades
+ * como é o caso de mostrarmos as listas de carros, adicionar carros, entre outras
+ */
 public class Car {
 	protected int ID_Car;
 	protected String marca;
@@ -74,6 +78,9 @@ public class Car {
 		this.estado = estado;
 	}
 	
+	/**
+	 *serve apenas para mostrar do modo que queremos a lista de carros em algumas utilidades
+	 */
 	@Override
 	public String toString() {
 		return "Carro-> " + ID_Car + " - " + estado + " - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +

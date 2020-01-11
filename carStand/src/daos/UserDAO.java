@@ -14,7 +14,8 @@ public final class UserDAO {
 	private UserDAO () {}
 
 	/**
-	 * Serve para mostrar a lista de clientes ao colaborador com todas as informações necessárias 
+	 * Serve para mostrar a lista de clientes ao colaborador com todas as informações necessárias
+	 * após pressionar o botão "Informação Clientes" 
 	 * @return
 	 */
 	public static ObservableList<User> getUsers() {
@@ -41,6 +42,11 @@ public final class UserDAO {
 		return users;
 	}
 
+	/**
+	 * Vai buscar todos os Usuários para que no LoginUserController
+	 * para que seja possivel apenas estes realizarem o Login
+	 * @return
+	 */
 	public static User getUserByName(String nome) {
 
 		Connection conn = DBConnector.getConnection();

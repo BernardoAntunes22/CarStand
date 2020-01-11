@@ -15,11 +15,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import pt.iade.carStand.WindowManager;
-import pt.iade.carStand.models.User;
 
 
+/**
+ * Classe com a utilidade de o colaborador conseguir adicionar um carro
+ *
+ */
 public class ColabAddCarController {
-	private User loggedUser;    
 
 	@FXML
 	private TextField txtMarca;
@@ -38,10 +40,6 @@ public class ColabAddCarController {
 
 	@FXML
 	private TextField txtCombustivel;
-
-	public ColabAddCarController(User loggedUser) {
-		this.loggedUser = loggedUser;
-	}
 	
 	/**
 	 * confirma se todos inputs no preenchimento do carro estao preenchidos
@@ -89,7 +87,7 @@ public class ColabAddCarController {
 				ps.setString(6, txtCombustivel.getText());
 				ps.execute();
 
-				WindowManager.openAddCarComplete(loggedUser);
+				WindowManager.openAddCarComplete();
 
 			}catch(SQLException ex){
 				Logger.getLogger(ColabAddCarController.class.getName()).log(Level.SEVERE, null, ex);
@@ -112,6 +110,6 @@ public class ColabAddCarController {
 	 */
 	@FXML
 	void backToColabMainView() {
-		WindowManager.backToColabMainView(loggedUser);
+		WindowManager.backToColabMainView();
 	}
 }

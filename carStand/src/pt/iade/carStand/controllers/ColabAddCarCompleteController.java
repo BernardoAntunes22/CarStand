@@ -2,14 +2,8 @@ package pt.iade.carStand.controllers;
 
 import javafx.fxml.FXML;
 import pt.iade.carStand.WindowManager;
-import pt.iade.carStand.models.User;
 
 public class ColabAddCarCompleteController {
-	private User loggedUser;   
-
-	public ColabAddCarCompleteController(User loggedUser) {
-		this.loggedUser = loggedUser;		
-	}
 
 	/**
 	 * Faz logout e volta o login do colab
@@ -24,6 +18,6 @@ public class ColabAddCarCompleteController {
 	 */
 	@FXML
 	private void backToAddCar() {
-		WindowManager.backToColabAddCarView(loggedUser);
+		WindowManager.backToColabAddCarView();
 	}
 }

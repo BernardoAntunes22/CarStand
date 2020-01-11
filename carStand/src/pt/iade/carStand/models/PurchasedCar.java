@@ -28,6 +28,9 @@ public class PurchasedCar extends Car{
 		this.nome = nome;
 	}
 	
+	/**
+	 *serve apenas para mostrar do modo que queremos a lista de carros comprados/reservados ao colaborador
+	 */
 	@Override
 	public String toString() {
 		return "Carro-> " + ID_Car + " - " + estado + " por " + nome +" ("+ "Id-" + ID_Comprador+") - " + marca + " " + 

@@ -9,10 +9,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import pt.iade.carStand.models.Car;
 
-/**
- * @author HP
- *
- */
 public final class CarDAO {
 	private CarDAO () {}
 

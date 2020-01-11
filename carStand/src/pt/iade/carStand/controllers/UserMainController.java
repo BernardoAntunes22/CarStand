@@ -53,12 +53,12 @@ public class UserMainController {
 
 	/**
 	 * Após inserir o ID do carro pretendido o botão fará com que a reserva seja realizada
-	 * De modo a que o colaborador consiga ver os carros que estão reservados para futuramente proseeguir com a compra
+	 * De modo a que o colaborador depois consiga ver os carros que estão reservados para futuramente finalizar a compra
 	 * @param event
 	 */
 	@FXML
 	void reservar(ActionEvent event) {
-		Car car = listaCarros_LV.getSelectionModel().getSelectedItem();
+		Car car = null;
 
 		if (!txtID.getText().equals("")) {
 			try {

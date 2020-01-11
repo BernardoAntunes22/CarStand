@@ -16,19 +16,16 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.Car;
-import pt.iade.carStand.models.User;
 
 public class ColabInventoryController {
-    private User loggedUser;    
-
-	public ColabInventoryController(User loggedUser) {
-    	this.loggedUser = loggedUser;
-	}
 	
     @FXML
     private TextField txtID;
 
 	
+    /**
+     * ListView que fará ser possivel mostrar a lista de carros ao colaborador
+     */
     @FXML
     private ListView<Car> listaCarrosColab_LV;
 	
@@ -53,14 +50,15 @@ public class ColabInventoryController {
      */
     @FXML
     private void backToColabMainView() {
-    	WindowManager.backToColabMainView(loggedUser);
+    	WindowManager.backToColabMainView();
     }
     @FXML
     void listaCarrosComprados(ActionEvent event) {
-    	WindowManager.GoToCarPurchasedWindow(loggedUser);
+    	WindowManager.GoToCarPurchasedWindow();
     }
     /**
-     * Serve para voltar ao menu principal do Colab
+     * Serve o colaborador conseguir vender um carro
+     * Deste modo o estado do carro passará a Comprado quando aparecer na lista 
      */
     @FXML
     private void PurchasedCarWindow() {
@@ -72,7 +70,7 @@ public class ColabInventoryController {
 				int id = Integer.parseInt(txtID.getText());
 				ps.setInt(1, id);
 				ps.execute();
-				WindowManager.GoToCarPurchasedWindow(loggedUser);
+				WindowManager.GoToCarPurchasedWindow();
 
 			} catch (SQLException ex) {
 				Logger.getLogger(UserMainController.class.getName()).log(Level.SEVERE, null, ex);

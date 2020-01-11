@@ -5,20 +5,17 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.PurchasedCar;
-import pt.iade.carStand.models.User;
 
 public class ColabCarPurchasedController {
-	private User loggedUser;
-	
-	public ColabCarPurchasedController(User loggedUser) {
-		this.loggedUser = loggedUser;
-	}
 
+	/**
+	 * ListView criada com a utilidade de mostrar os carros comprados e reservados ao colaborador
+	 */
 	@FXML
 	private ListView<PurchasedCar> listaCarrosCompradosColab_LV;
 
 	/**
-	 * Serve para mostrar a lista de carros atualizada da Base de dados
+	 * Serve para mostrar a lista de carros comprados e reservados atualizada
 	 */
 	@FXML
 	private void initialize() {
@@ -30,6 +27,6 @@ public class ColabCarPurchasedController {
 	 */
 	@FXML
 	void backToColabInventory() {
-		WindowManager.backToColabInventory(loggedUser);
+		WindowManager.backToColabInventory();
 	}
 }

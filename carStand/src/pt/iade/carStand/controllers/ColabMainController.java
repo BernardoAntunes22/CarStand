@@ -3,14 +3,8 @@ package pt.iade.carStand.controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import pt.iade.carStand.WindowManager;
-import pt.iade.carStand.models.User;
 
 public class ColabMainController {	
-    private User loggedUser;    
-
-	public ColabMainController(User loggedUser) {
-    	this.loggedUser = loggedUser;
-	}
 	
     /**
      * Faz logout e volta o login do colab
@@ -26,7 +20,7 @@ public class ColabMainController {
      */
     @FXML
     void inventario(ActionEvent event) {
-    	WindowManager.inventarioWindow(loggedUser);
+    	WindowManager.inventarioWindow();
     }
     
     /**
@@ -35,7 +29,7 @@ public class ColabMainController {
      */
     @FXML
     void infoUser(ActionEvent event) {
-    	WindowManager.infoUserWindow(loggedUser);
+    	WindowManager.infoUserWindow();
     }
     
     /**
@@ -44,6 +38,6 @@ public class ColabMainController {
      */
     @FXML
     void addCar(ActionEvent event) {
-    	WindowManager.addCarWindow(loggedUser);
+    	WindowManager.addCarWindow();
     }
 }

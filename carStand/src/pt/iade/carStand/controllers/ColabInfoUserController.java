@@ -7,14 +7,8 @@ import pt.iade.carStand.WindowManager;
 import pt.iade.carStand.models.User;
 
 public class ColabInfoUserController {
-	private User loggedUser;
-
-	public ColabInfoUserController(User loggedUser) {
-		this.loggedUser = loggedUser;
-	}
-
 	/**
-	 * Id que faz mostrar a lista de clientes
+	 * ListView que fará ser possivel mostrar a lista de clientes
 	 */
 	@FXML
 	private ListView<User> listaClientes_LV;
@@ -33,18 +27,13 @@ public class ColabInfoUserController {
 	@FXML
 	private void backToMainColab() {
 		WindowManager.backLoginColab();
-	}
+	}    
 
 	/**
 	 * Serve para voltar ao menu principal do Colab
 	 */
 	@FXML
-	void backToColabMainView() {
-		WindowManager.backToColabMainView(loggedUser);
-	}    
-
-	@FXML
 	void backToColabInventory() {
-		WindowManager.backToColabMainView(loggedUser);
+		WindowManager.backToColabMainView();
 	}
 }

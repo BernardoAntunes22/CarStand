@@ -13,6 +13,7 @@ public class PurchasedCarDAO {
 	private PurchasedCarDAO () {}
 	/**
 	 * serve para mostrar a lista de carros reservados/comprados
+	 * e quem foi o User que já reservou / comprou
 	 * @return
 	 */
 	public static ObservableList<PurchasedCar> getPurchasedCars() {

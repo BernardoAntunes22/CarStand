@@ -1,5 +1,9 @@
 package pt.iade.carStand.models;
 
+/**
+ *Classe criada para que atraves desta possamos mostrar a lista de usuários
+ *no caso, um dos cenários secundários
+ */
 public class User {
 	private int ID_Cliente;
 	private String nome;
@@ -62,6 +66,9 @@ public class User {
 		this.profissao = profissao;
 	}
 	
+	/**
+	 *serve apenas para mostrar do modo que queremos a lista de clientes ao colaborador
+	 */
 	@Override
 	public String toString() {
 		return nome + ", Morada: " + morada + ", Telemóvel: " + telemovel + ", NIF: " + nif
