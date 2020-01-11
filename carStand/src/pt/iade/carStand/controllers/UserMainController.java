@@ -40,7 +40,7 @@ public class UserMainController {
 	@FXML
 	private void initialize() {
 		//int nif = loggedUser.getNif(); // nao esta a fazer nada
-		listaCarros_LV.setItems(CarDAO.getCars());
+		listaCarros_LV.setItems(CarDAO.getCarsInventory());
 	} 
 	
 	/**

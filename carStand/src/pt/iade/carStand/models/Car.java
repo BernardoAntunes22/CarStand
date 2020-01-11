@@ -1,15 +1,15 @@
 package pt.iade.carStand.models;
 
 public class Car {
-	private int ID_Car;
-	private String marca;
-	private String modelo;
-	private String cor;
-	private int cilindrada;
-	private int ano;
-	private int preco;
-	private String combustivel;
-	private String estado;
+	protected int ID_Car;
+	protected String marca;
+	protected String modelo;
+	protected String cor;
+	protected int cilindrada;
+	protected int ano;
+	protected int preco;
+	protected String combustivel;
+	protected String estado;
 
 	public Car(int ID_Car, String marca, String modelo, int cilindrada, int preco, int ano, String combustivel, String estado) {
 		super();
@@ -76,7 +76,7 @@ public class Car {
 	
 	@Override
 	public String toString() {
-		return "ID-> " + ID_Car + " - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
+		return "Carro-> " + ID_Car + " - " + estado + " - " + marca + " " + modelo + ", Cilindrada: " + cilindrada + ", Preço: " + preco +
 				", Ano: "+ ano + ", Combustivel: " + combustivel;
 	}
 }
