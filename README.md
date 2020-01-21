@@ -1,6 +1,6 @@
 # CarStand
 
-##Enquadramento
+--Enquadramento
 Consiste num programa que nos possibilita gerir um stand de automoveis. O Programa tera duas vertentes, a vertente do
 cliente que procura comprar um ou mais carros, permitindo faze-lo diretamente atraves da aplicacao/site, e a vertente do
 colaborador do stand que podera gerir o stock de carros, aceder aos dados do cliente e procurar se existe um certo carro.
